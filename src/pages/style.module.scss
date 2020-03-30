@@ -1,0 +1,68 @@
+.intro {
+  max-width: 650px;
+  font-size: 1.5rem;
+  color: #666;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #e5a;
+}
+
+.countries-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  font-size: 1.125rem;
+
+  @media (min-width: 600px) {
+    font-size: 1.375rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.country-link {
+  display: block;
+  text-transform: capitalize;
+  padding: 0.5rem;
+
+  &:hover {
+    color: #c5a;
+    text-decoration: none;
+  }
+}
+
+:global(.heading) {
+  font-size: 1rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+// .getting-help {
+//   display: grid;
+//   grid-gap: 1rem;
+//   padding-top: 2rem;
+//   padding-bottom: 2rem;
+//   border-top: 2px solid #e5a;
+//   border-bottom: 2px solid #e5a;
+
+//   grid-template-columns: 1fr;
+//   grid-template-rows: auto;
+
+//   @media (min-width: 600px) {
+//     grid-template-columns: 2fr 1fr;
+//     grid-template-rows: auto;
+//   }
+// }
+
+// .who-whatsapp {
+//   text-decoration: none;
+//   font-size: 1.5rem;
+//   font-weight: bold;
+// }
+
+// .whatsapp-icon {
+//   margin: -0.5rem 0.25rem 0 0;
+//   display: inline-block;
+//   vertical-align: middle;
+// }

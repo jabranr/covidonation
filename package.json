@@ -1,0 +1,52 @@
+{
+  "name": "covidonation",
+  "version": "1.0.0",
+  "description": "List of resources, donations, charities and information on ways to help in Coronavirus (COVID-19) pandemic.",
+  "main": "index.js",
+  "scripts": {
+    "setup": "node setup.js",
+    "prestart": "npm run setup",
+    "prebuild": "npm run setup",
+    "pretest": "npm run setup",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "keywords": [
+    "coronavirus",
+    "covid-19",
+    "covid19",
+    "resources"
+  ],
+  "author": {
+    "name": "Jabran Rafique",
+    "email": "hello@jabran.me"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "dayjs": "^1.8.23",
+    "history": "^4.10.1",
+    "js-cookie": "^2.2.1",
+    "lodash-es": "^4.17.15",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "typography": "^0.16.19"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

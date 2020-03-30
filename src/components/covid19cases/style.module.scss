@@ -1,0 +1,59 @@
+.latest {
+  display: grid;
+  margin-bottom: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  place-items: center;
+  text-align: center;
+  color: #666;
+}
+
+.latest-numbers {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #555;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  line-height: 4.5;
+  text-align: center;
+
+  @media (min-width: 600px) {
+    font-size: 3rem;
+    line-height: 4;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.case-type {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: bold;
+}
+
+.latest-confirmed {
+  background-color: #c301;
+}
+
+.latest-recovered {
+  background-color: #0801;
+}
+
+.latest-deaths {
+  background-color: #3331;
+}
+
+.last-updated {
+  text-align: left;
+  justify-self: start;
+  grid-column: 1/-1;
+  font-size: small;
+  margin-bottom: 0;
+
+  > * {
+    margin: 0;
+  }
+}
