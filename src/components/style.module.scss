@@ -58,7 +58,7 @@
   margin-top: 2rem;
   padding: 3rem 1rem;
   color: #888;
-  border-top: 3px solid #e5a;
+  border-top: 5px solid #e5a;
 
   a,
   a:link {
@@ -69,17 +69,3 @@
     text-decoration: none;
   }
 }
-
-:global(.container) {
-  display: block;
-  width: 100%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-// :global(strong) {
-//   color: #c30;
-// }

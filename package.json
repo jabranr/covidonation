@@ -24,6 +24,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@jabranr-lab/prettier": "^1.1.0",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
     "dayjs": "^1.8.23",
@@ -37,6 +38,7 @@
     "react-scripts": "^3.4.1",
     "typography": "^0.16.19"
   },
+  "prettier": "@jabranr-lab/prettier",
   "browserslist": {
     "production": [
       ">0.2%",

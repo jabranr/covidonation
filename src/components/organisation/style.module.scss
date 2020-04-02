@@ -1,0 +1,21 @@
+.org {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+
+  & + & {
+    margin-top: 2rem;
+  }
+}
+
+.name {
+}
+
+.description {
+}
+
+.ac-title {
+}
+
+.areas-covered {
+}

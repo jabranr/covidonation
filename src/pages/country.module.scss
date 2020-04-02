@@ -1,6 +1,11 @@
 .title {
   border-bottom: 5px solid #e5a;
-  padding-bottom: 1rem;
+
+  @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 .stats {
@@ -10,5 +15,15 @@
 
   @media (min-width: 600px) {
     padding: 3rem 0 1rem;
+  }
+}
+
+.helplines {
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+
+  @media (min-width: 600px) {
+    text-align: right;
   }
 }

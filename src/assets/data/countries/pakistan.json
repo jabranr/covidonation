@@ -8,7 +8,7 @@
   "links": [
     "http://www.covidwatch.pk"
   ],
-  "data": [
+  "orgs": [
     {
       "name": "JDC Foundation Pakistan",
       "description": "They will help Sindh govt with providing food to isolated patients. They also have relief setups in Sindh where they offer free food to people. They are doubling their efforts nowadays.",
@@ -16,9 +16,10 @@
         "+922136341059",
         "+923330404043"
       ],
-      "website": "",
+      "donation": "https://www.facebook.com/JDC.organization/",
       "social": [
         {
+          "website": "https://www.facebook.com/JDC.organization/",
           "facebook": "https://www.facebook.com/JDC.organization/",
           "twitter": ""
         }
@@ -37,8 +38,12 @@
         "Pakistan@robinhoodarmy.com",
         "info@orangetreefoundation.org"
       ],
-      "website": "http://orangetreefoundation.org",
-      "social": [],
+      "donation": "+923000225518",
+      "social": [
+        {
+          "website": "http://orangetreefoundation.org"
+        }
+      ],
       "areasCovered": [
         "Sindh"
       ]
@@ -49,9 +54,10 @@
       "contact": [
         "+923323400595"
       ],
-      "website": "",
+      "donation": "+923323400595",
       "social": [
         {
+          "website": "https://www.facebook.com/KarachiCCC/",
           "facebook": "https://www.facebook.com/KarachiCCC/"
         }
       ],
