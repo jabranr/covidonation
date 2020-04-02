@@ -28,6 +28,9 @@ const typography = new Typography({
     'Segoe UI Symbol'
   ],
   overrideStyles: () => ({
+    body: {
+      backgroundColor: '#fafafa'
+    },
     '.container': {
       display: 'block',
       width: '100%',
@@ -39,7 +42,7 @@ const typography = new Typography({
     },
     '.heading': {
       fontSize: '1rem',
-      color: '#999',
+      color: '#888',
       textTransform: 'uppercase',
       letterSpacing: '1px'
     }

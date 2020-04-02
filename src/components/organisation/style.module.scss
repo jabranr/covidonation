@@ -1,7 +1,16 @@
 .org {
-  border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    grid-column-gap: 2rem;
+    place-items: start;
+  }
 
   & + & {
     margin-top: 2rem;
@@ -9,13 +18,41 @@
 }
 
 .name {
-}
-
-.description {
-}
-
-.ac-title {
+  font-size: 1.125rem;
+  margin-bottom: 0;
+  grid-column: 1/-1;
 }
 
 .areas-covered {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: center;
+  grid-column: 1/-1;
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.ac-link {
+  color: #888;
+}
+
+.description {
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.donation-cta {
+  display: block;
+  background-color: #fafafa;
+  color: #e5a;
+  border: 2px solid #e5a;
+  border-radius: 4px;
+  min-width: 100px;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  justify-self: end;
+  align-self: start;
 }
