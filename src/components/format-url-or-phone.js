@@ -26,7 +26,7 @@ const FormatUrlOrPhone = ({ href, children, ...attr }) => {
 
   if (/[0-9-+ ]/.test(href)) {
     return (
-      <a href={`tel:${href}`} {...attr}>
+      <a href={`tel:${href}`} className={attr.className}>
         {children}
       </a>
     );

@@ -28,10 +28,13 @@
   grid-template-columns: 18px 1fr;
   align-items: center;
   grid-column: 1/-1;
+  width: 100%;
   font-size: 0.875rem;
   color: #888;
   margin-bottom: 0;
   margin-top: 5px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
 }
 
 .ac-link {
@@ -55,4 +58,18 @@
   text-decoration: none;
   justify-self: end;
   align-self: start;
+  margin-top: 0.5rem;
+
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+
+  &:hover,
+  &:active {
+    color: white;
+    background: #e5a;
+  }
+}
+
+.cta-icon {
+  vertical-align: middle;
+  margin: -4px 2px 0 0;
 }
