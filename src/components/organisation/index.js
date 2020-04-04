@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useRef } from 'react';
 import classNames from 'classnames';
 
 import FormatUrlOrPhone from '../format-url-or-phone';
@@ -41,24 +41,63 @@ const TwitterIcon = ({ size = 16, ...attrs }) => (
   </svg>
 );
 
-const Organisation = ({ org }) => {
-  const [isDetailedView, setDetailedView] = useState(false);
+const ChevronDownIcon = ({ width = 18, height = 16, ...attrs }) => {
+  if (width !== height) {
+    attrs.viewBox = `0 0 ${width * 2} ${height * 2}`;
+  }
 
   return (
-    <div className={classNames(style.org, { [style['small']]: !isDetailedView })}>
+    <svg width={width} height={height} fill="currentColor" {...attrs}>
+      <path d="M32 16c0-8.837-7.163-16-16-16S0 7.163 0 16s7.163 16 16 16 16-7.163 16-16zM3 16C3 8.82 8.82 3 16 3s13 5.82 13 13-5.82 13-13 13S3 23.18 3 16z" />
+      <path d="M9.914 11.086l-2.828 2.828L16 22.828l8.914-8.914-2.828-2.828L16 17.172z" />
+    </svg>
+  );
+};
+
+const ChevronUpIcon = ({ width = 18, height = 16, ...attrs }) => {
+  if (width !== height) {
+    attrs.viewBox = `0 0 ${width * 2} ${height * 2}`;
+  }
+
+  return (
+    <svg width={width} height={height} fill="currentColor" {...attrs}>
+      <path d="M0 16c0 8.837 7.163 16 16 16s16-7.163 16-16S24.837 0 16 0 0 7.163 0 16zm29 0c0 7.18-5.82 13-13 13S3 23.18 3 16 8.82 3 16 3s13 5.82 13 13z" />
+      <path d="M22.086 20.914l2.828-2.828L16 9.172l-8.914 8.914 2.828 2.828L16 14.828z" />
+    </svg>
+  );
+};
+
+const Organisation = ({ org }) => {
+  const cardRef = useRef();
+  const [isDetailedView, setDetailedView] = useState(false);
+
+  const scrollToTopOfCard = () => {
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({
+        top: cardRef.current.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    } else {
+      window.scrollTo(0, cardRef.current.offsetTop - 100);
+    }
+  };
+
+  return (
+    <div ref={cardRef} className={classNames(style.org, { [style['small']]: !isDetailedView })}>
       <h3 className={style.name}>{org.name}</h3>
       {org.areasCovered && Boolean(org.areasCovered.length) && (
         <div className={style['areas-covered']}>
           <LocationIcon />
           <div>
-            {org.areasCovered.map((a) => (
+            {org.areasCovered.map((areaCovered) => (
               <a
+                key={areaCovered}
                 className={style['ac-link']}
                 target="_blank"
                 rel="noopener noreferrer"
-                href={`//maps.google.com?q=${a}`}
+                href={`//maps.google.com?q=${areaCovered}`}
               >
-                {a}
+                {areaCovered}
               </a>
             ))}
           </div>
@@ -80,15 +119,9 @@ const Organisation = ({ org }) => {
         Make a donation
       </FormatUrlOrPhone>
 
-      {!isDetailedView && (
-        <button className={style['more-details']} type="button">
-          More details
-        </button>
-      )}
-
       {Boolean(org.contacts && org.contacts.length) && (
-        <div>
-          <h5 className="heading">Contacts</h5>
+        <div className={classNames(style.contacts)}>
+          <h5 className="heading">Other ways to contact</h5>
           <ul>
             {org.contacts.map((contact) => (
               <li key={contact}>
@@ -118,6 +151,26 @@ const Organisation = ({ org }) => {
                   <TwitterIcon size={32} className={style.twitter} />
                 </FormatUrlOrPhone>
               )}
+              <button
+                className={style['more-details']}
+                type="button"
+                onClick={() => {
+                  scrollToTopOfCard();
+                  setDetailedView((currValue) => !currValue);
+                }}
+              >
+                {isDetailedView ? (
+                  <>
+                    <ChevronUpIcon className={style['more-details-icon']} />
+                    Less details
+                  </>
+                ) : (
+                  <>
+                    <ChevronDownIcon className={style['more-details-icon']} />
+                    More details
+                  </>
+                )}
+              </button>
             </div>
           );
         })}

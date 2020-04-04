@@ -3,6 +3,9 @@
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
+  // height: auto;
+
+  // transition: height 0.8s ease-in-out;
 
   @media (min-width: 600px) {
     display: grid;
@@ -18,12 +21,12 @@
 }
 
 .small {
-  height: 280px;
-  overflow: hidden;
+  // height: 280px;
+  // overflow: hidden;
 
-  @media (min-width: 600px) {
-    height: 160px;
-  }
+  // @media (min-width: 600px) {
+  //   height: 160px;
+  // }
 }
 
 .name {
@@ -53,17 +56,6 @@
 .description {
   color: #666;
   margin-top: 1rem;
-}
-
-.more-details {
-  display: block;
-  width: 100%;
-  border: 0 none;
-  border-top: 1px solid #ddd;
-  padding: 0.75rem 1rem;
-  margin: 1rem auto;
-  text-align: center;
-  color: #888;
 }
 
 .donation-cta {
@@ -96,9 +88,13 @@
   margin: -4px 2px 0 0;
 }
 
+.contacts {
+  margin-top: 2rem;
+}
+
 .social {
   display: grid;
-  grid-template-columns: repeat(3, min-content);
+  grid-template-columns: repeat(4, min-content);
   width: 100%;
   place-items: center;
   grid-column: 1/-1;
@@ -123,4 +119,25 @@
 .twitter {
   color: #1da1f2;
   text-decoration: none;
+}
+
+.more-details {
+  display: block;
+  border: 0 none;
+  justify-self: end;
+  color: #888;
+  cursor: pointer;
+  grid-column: -1;
+
+  transition: color 0.2s ease-in;
+
+  &:hover,
+  &:active {
+    color: #f55555;
+  }
+}
+
+.more-details-icon {
+  vertical-align: middle;
+  margin-right: 3px;
 }
