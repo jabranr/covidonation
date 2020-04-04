@@ -3,9 +3,6 @@
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
-  // height: auto;
-
-  // transition: height 0.8s ease-in-out;
 
   @media (min-width: 600px) {
     display: grid;
@@ -18,15 +15,6 @@
   & + & {
     margin-top: 2rem;
   }
-}
-
-.small {
-  // height: 280px;
-  // overflow: hidden;
-
-  // @media (min-width: 600px) {
-  //   height: 160px;
-  // }
 }
 
 .name {
@@ -62,7 +50,6 @@
   display: block;
   background-color: #fafafa;
   color: #f55555;
-  border: 2px solid #f55555;
   border-radius: 4px;
   min-width: 100px;
   text-align: center;
@@ -70,7 +57,7 @@
   text-decoration: none;
   justify-self: end;
   align-self: start;
-  transition: color 0.2s ease-in, background-color 0.2s ease-in;
+  transition: all 0.2s ease-in;
 
   &:hover,
   &:active {
@@ -88,8 +75,15 @@
   margin: -4px 2px 0 0;
 }
 
+:root {
+  --contacts-height: 0px;
+}
+
 .contacts {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  height: var(--contacts-height);
+  transition: all 0.4s ease-in-out;
 }
 
 .social {
@@ -126,6 +120,7 @@
   border: 0 none;
   justify-self: end;
   color: #888;
+  background-color: #fff;
   cursor: pointer;
   grid-column: -1;
 

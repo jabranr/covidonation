@@ -67,11 +67,27 @@ const ChevronUpIcon = ({ width = 18, height = 16, ...attrs }) => {
   );
 };
 
+const isInViewport = function(elem) {
+  const bounding = elem.getBoundingClientRect();
+  return (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
 const Organisation = ({ org }) => {
   const cardRef = useRef();
+  const contactRef = useRef();
+
   const [isDetailedView, setDetailedView] = useState(false);
 
   const scrollToTopOfCard = () => {
+    if (isInViewport(cardRef.current)) {
+      return;
+    }
+
     if ('scrollBehavior' in document.documentElement.style) {
       window.scrollTo({
         top: cardRef.current.offsetTop - 100,
@@ -83,7 +99,7 @@ const Organisation = ({ org }) => {
   };
 
   return (
-    <div ref={cardRef} className={classNames(style.org, { [style['small']]: !isDetailedView })}>
+    <div ref={cardRef} className={style.org}>
       <h3 className={style.name}>{org.name}</h3>
       {org.areasCovered && Boolean(org.areasCovered.length) && (
         <div className={style['areas-covered']}>
@@ -106,7 +122,7 @@ const Organisation = ({ org }) => {
       <p
         className={style.description}
         dangerouslySetInnerHTML={{
-          __html: isDetailedView ? org.description : `${org.description.substring(0, 80)}...`
+          __html: isDetailedView ? org.description : `${org.description.substring(0, 150)}...`
         }}
       />
 
@@ -120,7 +136,7 @@ const Organisation = ({ org }) => {
       </FormatUrlOrPhone>
 
       {Boolean(org.contacts && org.contacts.length) && (
-        <div className={classNames(style.contacts)}>
+        <div ref={contactRef} className={style.contacts} style={{ '--height': `0px` }}>
           <h5 className="heading">Other ways to contact</h5>
           <ul>
             {org.contacts.map((contact) => (
@@ -155,8 +171,21 @@ const Organisation = ({ org }) => {
                 className={style['more-details']}
                 type="button"
                 onClick={() => {
-                  scrollToTopOfCard();
-                  setDetailedView((currValue) => !currValue);
+                  setDetailedView((currValue) => {
+                    const root = document.documentElement;
+                    if (currValue) {
+                      root.style.setProperty('--contacts-height', `0px`);
+                    } else {
+                      root.style.setProperty('--contacts-height', `${contactRef.current.scrollHeight}px`);
+                    }
+
+                    return !currValue;
+                  });
+
+                  // wait for animation to finish before scrolling
+                  setTimeout(() => {
+                    scrollToTopOfCard();
+                  }, 400);
                 }}
               >
                 {isDetailedView ? (
