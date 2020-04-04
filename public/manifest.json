@@ -20,6 +20,6 @@
   ],
   "start_url": ".?utm_source=webapp",
   "display": "standalone",
-  "theme_color": "#e5a",
-  "background_color": "#e5a"
+  "theme_color": "#f55555",
+  "background_color": "#f55555"
 }

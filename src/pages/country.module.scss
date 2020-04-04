@@ -1,5 +1,5 @@
 .title {
-  border-bottom: 5px solid #e5a;
+  border-bottom: 2px solid #f55555;
 
   @media (min-width: 600px) {
     display: grid;
@@ -9,7 +9,7 @@
 }
 
 .stats {
-  border-bottom: 5px solid #e5a;
+  border-bottom: 2px solid #f55555;
   padding: 1rem 0 0;
   margin-bottom: 2rem;
 
@@ -26,4 +26,13 @@
   @media (min-width: 600px) {
     text-align: right;
   }
+}
+
+.links {
+  margin-top: 2rem;
+}
+
+.tick-icon {
+  margin-right: 5px;
+  color: #888;
 }

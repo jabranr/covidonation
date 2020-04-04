@@ -17,6 +17,15 @@
   }
 }
 
+.small {
+  height: 280px;
+  overflow: hidden;
+
+  @media (min-width: 600px) {
+    height: 160px;
+  }
+}
+
 .name {
   font-size: 1.125rem;
   margin-bottom: 0;
@@ -43,14 +52,25 @@
 
 .description {
   color: #666;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+}
+
+.more-details {
+  display: block;
+  width: 100%;
+  border: 0 none;
+  border-top: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  margin: 1rem auto;
+  text-align: center;
+  color: #888;
 }
 
 .donation-cta {
   display: block;
   background-color: #fafafa;
-  color: #e5a;
-  border: 2px solid #e5a;
+  color: #f55555;
+  border: 2px solid #f55555;
   border-radius: 4px;
   min-width: 100px;
   text-align: center;
@@ -58,18 +78,49 @@
   text-decoration: none;
   justify-self: end;
   align-self: start;
-  margin-top: 0.5rem;
-
   transition: color 0.2s ease-in, background-color 0.2s ease-in;
 
   &:hover,
   &:active {
     color: white;
-    background: #e5a;
+    background: #f55555;
+  }
+
+  @media (min-width: 600px) {
+    margin-top: 1rem;
   }
 }
 
 .cta-icon {
   vertical-align: middle;
   margin: -4px 2px 0 0;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  width: 100%;
+  place-items: center;
+  grid-column: 1/-1;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+
+  > * + * {
+    margin-left: 1rem;
+  }
+}
+
+.website {
+  color: #333;
+  text-decoration: none;
+}
+
+.facebook {
+  color: #4267b2;
+  text-decoration: none;
+}
+
+.twitter {
+  color: #1da1f2;
+  text-decoration: none;
 }
