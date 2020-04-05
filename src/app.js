@@ -1,13 +1,13 @@
-import React, { Suspense } from "react";
-import { Router, Switch, Route } from "react-router-dom";
-import { createBrowserHistory } from "history";
+import React from 'react';
+import { Router, Switch, Route } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
-import "./config/typography";
-import config from "./config";
-import HomePage from "./pages";
-import CountryPage from "./pages/country";
-import NotFound from "./pages/not-found";
-import countries from "./assets/data";
+import './config/typography';
+import config from './config';
+import HomePage from './pages';
+import CountryPage from './pages/country';
+import NotFound from './pages/not-found';
+import countries from './assets/data';
 
 const { APP_BASEPATH } = config();
 
@@ -19,7 +19,7 @@ const history = createBrowserHistory({
 history.listen((location, action) => {
   if (window.dataLayer !== undefined) {
     window.dataLayer.push({
-      event: "PAGE_VIEW",
+      event: 'PAGE_VIEW',
       url: `${location.pathname}${location.search}`
     });
   }
@@ -30,10 +30,10 @@ const App = () => {
     <Router history={history} basename={APP_BASEPATH}>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        {countries.map(slug => (
+        {countries.map((slug) => (
           <Route
             path={`/${slug}`}
-            render={props => {
+            render={(props) => {
               return <CountryPage {...props} slug={slug} />;
             }}
             key={slug}

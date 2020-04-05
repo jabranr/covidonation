@@ -1,4 +1,4 @@
-import React, { lazy, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Layout from '../components/layout';
 import Covid19Cases from '../components/covid19cases';
@@ -19,23 +19,25 @@ const CountryPage = ({ slug }) => {
   const [data, setData] = useState({});
   const [summary, setSummary] = useState({});
 
-  async function getLatestData() {
-    try {
-      const jsonData = await import(`../assets/data/countries/${slug}.json`);
-      setData(jsonData);
-
-      const response = await apiClient.get('/summary');
-      const summary = find(response.data.Countries, { Slug: slug });
-      const lastUpdated = response.data.Date;
-      setSummary({ ...summary, lastUpdated });
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
   useEffect(() => {
-    getLatestData();
-  }, []);
+    async function getLatestData() {
+      try {
+        const jsonData = await import(`../assets/data/countries/${slug}.json`);
+        setData(jsonData);
+
+        const response = await apiClient.get('/summary');
+        const summary = find(response.data.Countries, { Slug: slug });
+        const lastUpdated = response.data.Date;
+        setSummary({ ...summary, lastUpdated });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+
+    if (Boolean(slug)) {
+      getLatestData();
+    }
+  }, [slug]);
 
   return (
     <Layout>

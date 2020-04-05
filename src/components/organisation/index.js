@@ -1,5 +1,4 @@
 import React, { memo, useState, useRef } from 'react';
-import classNames from 'classnames';
 
 import FormatUrlOrPhone from '../format-url-or-phone';
 

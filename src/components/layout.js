@@ -15,8 +15,8 @@ const Layout = ({ children }) => {
         <div className={style.cookie}>
           This website uses cookies to deliver better user experience. By continuing to use this website you agree to
           the use of cookies.{' '}
-          <a
-            href="#"
+          <Link
+            to="/"
             onClick={(ev) => {
               ev.preventDefault();
               cookie.set('cookie-consent', 'accepted');
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
             }}
           >
             I understand
-          </a>
+          </Link>
         </div>
       )}
       <header className={style.header}>

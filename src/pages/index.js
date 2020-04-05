@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Layout from '../components/layout';
@@ -7,9 +7,6 @@ import countries from '../assets/data';
 import style from './style.module.scss';
 
 const HomePage = () => {
-  const [data, setData] = useState([]);
-  const [updated, setUpdated] = useState(null);
-
   return (
     <Layout>
       <div className="container">
