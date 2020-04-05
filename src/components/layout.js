@@ -65,7 +65,7 @@ const Layout = ({ children }) => {
             GitHub
           </a>
         </div>
-        <p>&hearts; For humanity</p>
+        <p>&hearts; Created for humanity</p>
       </footer>
     </div>
   );
