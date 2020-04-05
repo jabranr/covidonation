@@ -26,36 +26,7 @@
   padding: 0.5rem;
 
   &:hover {
-    color: #c5a;
+    color: #f55555;
     text-decoration: none;
   }
 }
-
-// .getting-help {
-//   display: grid;
-//   grid-gap: 1rem;
-//   padding-top: 2rem;
-//   padding-bottom: 2rem;
-//   border-top: 2px solid #f55555;
-//   border-bottom: 2px solid #f55555;
-
-//   grid-template-columns: 1fr;
-//   grid-template-rows: auto;
-
-//   @media (min-width: 600px) {
-//     grid-template-columns: 2fr 1fr;
-//     grid-template-rows: auto;
-//   }
-// }
-
-// .who-whatsapp {
-//   text-decoration: none;
-//   font-size: 1.5rem;
-//   font-weight: bold;
-// }
-
-// .whatsapp-icon {
-//   margin: -0.5rem 0.25rem 0 0;
-//   display: inline-block;
-//   vertical-align: middle;
-// }

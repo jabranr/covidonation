@@ -9,19 +9,19 @@
 }
 
 .latest-numbers {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
   margin-bottom: 1rem;
   color: #555;
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  line-height: 4.5;
+  line-height: 5;
   text-align: center;
 
   @media (min-width: 600px) {
-    font-size: 3rem;
-    line-height: 4;
+    font-size: 2.5rem;
+    line-height: 5;
     width: 200px;
     height: 200px;
   }
