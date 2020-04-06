@@ -40,7 +40,6 @@
     "react-scripts": "^3.4.1",
     "typography": "^0.16.19"
   },
-  "prettier": "@jabranr-lab/prettier",
   "browserslist": {
     "production": [
       ">0.2%",

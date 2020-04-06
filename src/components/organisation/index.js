@@ -1,11 +1,18 @@
-import React, { memo, useState, useRef } from 'react';
+import React, { memo, useState, useRef } from "react";
 
-import FormatUrlOrPhone from '../format-url-or-phone';
+import FormatUrlOrPhone from "../format-url-or-phone";
 
-import style from './style.module.scss';
+import style from "./style.module.scss";
+import { pushDataLayer } from "../../util";
 
 const PhoneIcon = ({ width = 16, height = 16, ...attrs }) => (
-  <svg width={width} height={height} viewBox={`0 0 ${width * 2} ${height * 2}`} fill="currentColor" {...attrs}>
+  <svg
+    width={width}
+    height={height}
+    viewBox={`0 0 ${width * 2} ${height * 2}`}
+    fill="currentColor"
+    {...attrs}
+  >
     <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.11 12.11 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z" />
   </svg>
 );
@@ -23,7 +30,13 @@ const WebIcon = ({ width = 16, height = 18, ...attrs }) => {
 };
 
 const LocationIcon = ({ size = 14, ...attrs }) => (
-  <svg width={size} height={size} viewBox="0 0 1024 1024" fill="currentColor" {...attrs}>
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 1024 1024"
+    fill="currentColor"
+    {...attrs}
+  >
     <path d="M512 0C335.268 0 192 143.268 192 320c0 320 320 704 320 704s320-384 320-704C832 143.268 688.73 0 512 0zm0 512c-106.04 0-192-85.96-192-192s85.96-192 192-192 192 85.96 192 192-85.96 192-192 192z" />
   </svg>
 );
@@ -66,13 +79,15 @@ const ChevronUpIcon = ({ width = 18, height = 16, ...attrs }) => {
   );
 };
 
-const isInViewport = function(elem) {
+const isInViewport = function (elem) {
   const bounding = elem.getBoundingClientRect();
   return (
     bounding.top >= 0 &&
     bounding.left >= 0 &&
-    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    bounding.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <=
+      (window.innerWidth || document.documentElement.clientWidth)
   );
 };
 
@@ -87,10 +102,10 @@ const Organisation = ({ org }) => {
       return;
     }
 
-    if ('scrollBehavior' in document.documentElement.style) {
+    if ("scrollBehavior" in document.documentElement.style) {
       window.scrollTo({
         top: cardRef.current.offsetTop - 100,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     } else {
       window.scrollTo(0, cardRef.current.offsetTop - 100);
@@ -101,13 +116,21 @@ const Organisation = ({ org }) => {
     <div ref={cardRef} className={style.org}>
       <h3 className={style.name}>{org.name}</h3>
       {org.areasCovered && Boolean(org.areasCovered.length) && (
-        <div className={style['areas-covered']}>
+        <div className={style["areas-covered"]}>
           <LocationIcon />
           <div>
             {org.areasCovered.map((areaCovered) => (
               <a
                 key={areaCovered}
-                className={style['ac-link']}
+                className={style["ac-link"]}
+                onClick={() => {
+                  pushDataLayer({
+                    event: "gaEvent",
+                    gaCategory: "Areas covered CTA",
+                    gaAction: areaCovered,
+                    gaLabel: org.name,
+                  });
+                }}
                 target="_blank"
                 rel="noopener noreferrer"
                 href={`//maps.google.com?q=${areaCovered}`}
@@ -121,21 +144,37 @@ const Organisation = ({ org }) => {
       <p
         className={style.description}
         dangerouslySetInnerHTML={{
-          __html: isDetailedView ? org.description : `${org.description.substring(0, 150)}...`
+          __html: isDetailedView
+            ? org.description
+            : `${org.description.substring(0, 150)}...`,
         }}
       />
 
-      <FormatUrlOrPhone href={org.donation} className={style['donation-cta']}>
+      <FormatUrlOrPhone
+        href={org.donation}
+        className={style["donation-cta"]}
+        onClick={() => {
+          pushDataLayer({
+            event: "gaEvent",
+            gaCategory: "Make a donation CTA",
+            gaAction: org.name,
+          });
+        }}
+      >
         {/[0-9-+ ]/.test(org.donation) ? (
-          <PhoneIcon className={style['cta-icon']} />
+          <PhoneIcon className={style["cta-icon"]} />
         ) : (
-          <WebIcon className={style['cta-icon']} />
-        )}{' '}
+          <WebIcon className={style["cta-icon"]} />
+        )}{" "}
         Make a donation
       </FormatUrlOrPhone>
 
       {Boolean(org.contacts && org.contacts.length) && (
-        <div ref={contactRef} className={style.contacts} style={{ '--height': `0px` }}>
+        <div
+          ref={contactRef}
+          className={style.contacts}
+          style={{ "--height": `0px` }}
+        >
           <h5 className="heading">Other ways to contact</h5>
           <ul>
             {org.contacts.map((contact) => (
@@ -152,30 +191,69 @@ const Organisation = ({ org }) => {
           return (
             <div key={website || twitter || facebook} className={style.social}>
               {Boolean(website) && (
-                <FormatUrlOrPhone href={website}>
+                <FormatUrlOrPhone
+                  href={website}
+                  onClick={() => {
+                    pushDataLayer({
+                      event: "gaEvent",
+                      gaCategory: "Org social CTA",
+                      gaAction: "website",
+                      gaLabel: org.name,
+                    });
+                  }}
+                >
                   <WebIcon width={32} height={32} className={style.website} />
                 </FormatUrlOrPhone>
               )}
               {Boolean(facebook) && (
-                <FormatUrlOrPhone href={facebook}>
+                <FormatUrlOrPhone
+                  href={facebook}
+                  onClick={() => {
+                    pushDataLayer({
+                      event: "gaEvent",
+                      gaCategory: "Org social CTA",
+                      gaAction: "facebook",
+                      gaLabel: org.name,
+                    });
+                  }}
+                >
                   <FacebookIcon size={32} className={style.facebook} />
                 </FormatUrlOrPhone>
               )}
               {Boolean(twitter) && (
-                <FormatUrlOrPhone href={twitter}>
+                <FormatUrlOrPhone
+                  href={twitter}
+                  onClick={() => {
+                    pushDataLayer({
+                      event: "gaEvent",
+                      gaCategory: "Org social CTA",
+                      gaAction: "twitter",
+                      gaLabel: org.name,
+                    });
+                  }}
+                >
                   <TwitterIcon size={32} className={style.twitter} />
                 </FormatUrlOrPhone>
               )}
               <button
-                className={style['more-details']}
+                className={style["more-details"]}
                 type="button"
                 onClick={() => {
                   setDetailedView((currValue) => {
                     const root = document.documentElement;
                     if (currValue) {
-                      root.style.setProperty('--contacts-height', `0px`);
+                      root.style.setProperty("--contacts-height", `0px`);
                     } else {
-                      root.style.setProperty('--contacts-height', `${contactRef.current.scrollHeight}px`);
+                      pushDataLayer({
+                        event: "gaEvent",
+                        gaCategory: "Org more details CTA",
+                        gaAction: org.name,
+                      });
+
+                      root.style.setProperty(
+                        "--contacts-height",
+                        `${contactRef.current.scrollHeight}px`
+                      );
                     }
 
                     return !currValue;
@@ -189,12 +267,12 @@ const Organisation = ({ org }) => {
               >
                 {isDetailedView ? (
                   <>
-                    <ChevronUpIcon className={style['more-details-icon']} />
+                    <ChevronUpIcon className={style["more-details-icon"]} />
                     Less details
                   </>
                 ) : (
                   <>
-                    <ChevronDownIcon className={style['more-details-icon']} />
+                    <ChevronDownIcon className={style["more-details-icon"]} />
                     More details
                   </>
                 )}
