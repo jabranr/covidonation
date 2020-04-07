@@ -26,4 +26,4 @@ The source code is licensed under the MIT License unless stated otherwise. The d
 
 &copy; 2020 Jabran Rafique
 
-&hearts; Created for humanity
+&hearts; Made for humanity
