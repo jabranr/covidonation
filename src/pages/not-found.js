@@ -1,9 +1,10 @@
-import React, { memo } from "react";
-import Layout from "../components/layout";
+import React, { memo } from 'react';
+
+import Layout from '../components/layout';
 
 const NotFound = () => {
   return (
-    <Layout>
+    <Layout title="Page not found - COVIDonation">
       <div className="container">
         <h2>Not found</h2>
         <p>Sorry, the page your are looking for cannot be found.</p>
