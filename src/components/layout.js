@@ -76,7 +76,7 @@ const Layout = ({ title, description, canonical, children }) => {
             GitHub
           </a>
         </div>
-        <p>&hearts; Created for humanity</p>
+        <p>&hearts; Made for Humanity</p>
       </footer>
     </div>
   );
