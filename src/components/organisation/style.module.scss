@@ -88,21 +88,26 @@
 
 .social {
   display: grid;
-  grid-template-columns: repeat(4, min-content);
+  grid-template-columns: repeat(4, max-content);
   width: 100%;
   place-items: center;
+  grid-gap: 1rem;
   grid-column: 1/-1;
   padding-top: 1rem;
   border-top: 1px solid #ddd;
 
-  > * + * {
-    margin-left: 1rem;
+  > * {
+    line-height: 1;
   }
 }
 
 .website {
   color: #333;
-  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
 }
 
 .facebook {
