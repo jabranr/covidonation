@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
+import { find } from 'lodash-es';
 
 import './config/typography';
 import config from './config';
+import apiClient from './config/api-client';
 import HomePage from './pages';
 import CountryPage from './pages/country';
 import NotFound from './pages/not-found';
@@ -37,6 +39,23 @@ history.listen((location, action) => {
 });
 
 const App = () => {
+  const [summary, setSummary] = useState({});
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await apiClient.get('/summary');
+        setSummary({ data: response.data.Countries, lastUpdated: response.data.Date });
+      } catch (err) {
+        pushDataLayer({
+          event: 'gaEvent',
+          gaCategory: 'Errors',
+          gaAction: `API error`,
+          gaLabel: JSON.stringify(err.response)
+        });
+      }
+    })();
+  }, []);
+
   return (
     <Router history={history} basename={APP_BASEPATH}>
       <Switch>
@@ -45,7 +64,8 @@ const App = () => {
           <Route
             path={`/${slug}`}
             render={(props) => {
-              return <CountryPage {...props} slug={slug} />;
+              const countrySummary = find(summary.data, { Slug: slug });
+              return <CountryPage summary={countrySummary} lastUpdated={summary.lastUpdated} {...props} />;
             }}
             key={slug}
           />

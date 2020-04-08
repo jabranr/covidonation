@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { find } from 'lodash-es';
 
 import Layout from '../components/layout';
 import Covid19Cases from '../components/covid19cases';
 import Organisation from '../components/organisation';
 import FormatUrlOrPhone from '../components/format-url-or-phone';
 import config from '../config';
-import apiClient from '../config/api-client';
 import { pushDataLayer } from '../util';
 
 import style from './country.module.scss';
@@ -20,39 +18,29 @@ const TickIcon = ({ width = 16, height = 14, ...attrs }) => (
   </svg>
 );
 
-const CountryPage = ({ slug }) => {
+const CountryPage = ({ summary, lastUpdated }) => {
   const location = useLocation();
   const [data, setData] = useState({});
-  const [summary, setSummary] = useState({});
 
   useEffect(() => {
     async function getLatestData() {
       try {
-        const jsonData = await import(`../assets/data/countries/${slug}.json`);
+        const jsonData = await import(`../assets/data/countries/${summary.Slug}.json`);
         setData(jsonData);
-
-        const response = await apiClient.get('/summary');
-        const summary = find(response.data.Countries, { Slug: slug });
-        const lastUpdated = response.data.Date;
-        setSummary({ ...summary, lastUpdated });
       } catch (err) {
-        if (err.response && err.response.status === 429) {
-          pushDataLayer({
-            event: 'gaEvent',
-            gaCategory: 'Errors',
-            gaAction: 'API Rate limit error',
-            gaLabel: JSON.stringify(err.response)
-          });
-        }
-
-        console.log(err);
+        pushDataLayer({
+          event: 'gaEvent',
+          gaCategory: 'Errors',
+          gaAction: 'Country data error',
+          gaLabel: JSON.stringify(err.response)
+        });
       }
     }
 
-    if (Boolean(slug)) {
+    if (summary && summary.Slug) {
       getLatestData();
     }
-  }, [slug]);
+  }, [summary]);
 
   return (
     <Layout
@@ -74,12 +62,7 @@ const CountryPage = ({ slug }) => {
           </div>
         </div>
         <div className={style.stats}>
-          <Covid19Cases
-            totalConfirmed={summary.TotalConfirmed}
-            totalRecovered={summary.TotalRecovered}
-            totalDeaths={summary.TotalDeaths}
-            lastUpdated={summary.lastUpdated}
-          />
+          <Covid19Cases summary={summary} lastUpdated={lastUpdated} />
         </div>
         {data.orgs && Boolean(data.orgs.length) && (
           <div>

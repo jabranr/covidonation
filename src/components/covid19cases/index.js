@@ -6,24 +6,24 @@ import FormatUrlOrPhone from '../format-url-or-phone';
 
 import style from './style.module.scss';
 
-const Covid19Cases = ({ totalConfirmed, totalRecovered, totalDeaths, lastUpdated }) => {
+const Covid19Cases = ({ summary, lastUpdated }) => {
   return (
     <div className={style.latest}>
       <div className={style['latest-info']}>
         <h3 className={classNames(style['latest-numbers'], style['latest-confirmed'])}>
-          {totalConfirmed && totalConfirmed.toLocaleString()}
+          {summary && summary.TotalConfirmed && summary.TotalConfirmed.toLocaleString()}
         </h3>
         <p className={style['case-type']}>Confirmed</p>
       </div>
       <div className={style['latest-info']}>
         <h3 className={classNames(style['latest-numbers'], style['latest-recovered'])}>
-          {totalRecovered && totalRecovered.toLocaleString()}
+          {summary && summary.TotalRecovered && summary.TotalRecovered.toLocaleString()}
         </h3>
         <p className={style['case-type']}>Recovered</p>
       </div>
       <div className={style['latest-info']}>
         <h3 className={classNames(style['latest-numbers'], style['latest-deaths'])}>
-          {totalDeaths && totalDeaths.toLocaleString()}
+          {summary && summary.TotalDeaths && summary.TotalDeaths.toLocaleString()}
         </h3>
         <p className={style['case-type']}>Deaths</p>
       </div>
