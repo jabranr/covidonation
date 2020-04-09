@@ -1,21 +1,13 @@
 {
   "country": "Pakistan",
   "slug": "pakistan",
-  "helplines": [
-    "http://www.covid.gov.pk",
-    "1166"
-  ],
-  "links": [
-    "http://www.covidwatch.pk"
-  ],
+  "helplines": ["http://www.covid.gov.pk", "1166"],
+  "links": ["http://www.covidwatch.pk"],
   "orgs": [
     {
       "name": "JDC Foundation Pakistan",
       "description": "They will help Sindh govt with providing food to isolated patients. They also have relief setups in Sindh where they offer free food to people. They are doubling their efforts nowadays.",
-      "contacts": [
-        "+922136341059",
-        "+923330404043"
-      ],
+      "contacts": ["+922136341059", "+923330404043"],
       "donation": "https://www.facebook.com/JDC.organization/",
       "social": [
         {
@@ -24,9 +16,7 @@
           "twitter": "https://www.twitter.com/JDCOrganization/"
         }
       ],
-      "areasCovered": [
-        "Sindh"
-      ]
+      "areasCovered": ["Sindh"]
     },
     {
       "name": "Robin Hood Army / Orange Tree Foundation",
@@ -44,16 +34,12 @@
           "website": "http://orangetreefoundation.org"
         }
       ],
-      "areasCovered": [
-        "Sindh"
-      ]
+      "areasCovered": ["Sindh"]
     },
     {
       "name": "Coronavirus Control Campaign",
       "description": "They have developed a cheap sanitizer which they are distributing to those who can't afford it. You can get involved by contributing funds or volunteering for groundwork.",
-      "contacts": [
-        "+923323400595"
-      ],
+      "contacts": ["+923323400595"],
       "donation": "+923323400595",
       "social": [
         {
@@ -61,9 +47,7 @@
           "facebook": "https://www.facebook.com/KarachiCCC/"
         }
       ],
-      "areasCovered": [
-        "Sindh"
-      ]
+      "areasCovered": ["Sindh"]
     }
   ]
 }

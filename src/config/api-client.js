@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 
-import config from "./";
+import config from './';
 
 const { COVID19_API_HOSTNAME } = config();
 
