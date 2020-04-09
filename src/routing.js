@@ -14,6 +14,7 @@ import { pushDataLayer } from './util';
 const Routing = () => {
   const [summary, setSummary] = useSummary({});
 
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     (async () => {
       if (!summary.data) {
