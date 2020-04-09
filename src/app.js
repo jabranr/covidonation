@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { Router, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import { find } from 'lodash-es';
 
 import './config/typography';
 import config from './config';
-import apiClient from './config/api-client';
-import HomePage from './pages';
-import CountryPage from './pages/country';
-import NotFound from './pages/not-found';
-import countries from './assets/data';
-
+import SummaryProvider from './store/summary-provider';
+import Routing from './routing';
 import { pushDataLayer } from './util';
 
 const { APP_BASEPATH } = config();
@@ -39,39 +34,11 @@ history.listen((location, action) => {
 });
 
 const App = () => {
-  const [summary, setSummary] = useState({});
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await apiClient.get('/summary');
-        setSummary({ data: response.data.Countries, lastUpdated: response.data.Date });
-      } catch (err) {
-        pushDataLayer({
-          event: 'gaEvent',
-          gaCategory: 'Errors',
-          gaAction: `API error`,
-          gaLabel: JSON.stringify(err.response)
-        });
-      }
-    })();
-  }, []);
-
   return (
     <Router history={history} basename={APP_BASEPATH}>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        {countries.map((slug) => (
-          <Route
-            path={`/${slug}`}
-            render={(props) => {
-              const countrySummary = find(summary.data, { Slug: slug });
-              return <CountryPage summary={countrySummary} lastUpdated={summary.lastUpdated} {...props} />;
-            }}
-            key={slug}
-          />
-        ))}
-        <Route exact path="*" component={NotFound} />
-      </Switch>
+      <SummaryProvider>
+        <Routing />
+      </SummaryProvider>
     </Router>
   );
 };
