@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Layout from '../components/layout';
 import Covid19Cases from '../components/covid19cases';
 import Organisation from '../components/organisation';
 import FormatUrlOrPhone from '../components/format-url-or-phone';
+import useCountry from '../store/country-hook';
 import config from '../config';
 import { pushDataLayer } from '../util';
 
@@ -20,13 +21,13 @@ const TickIcon = ({ width = 16, height = 14, ...attrs }) => (
 
 const CountryPage = ({ summary, lastUpdated }) => {
   const location = useLocation();
-  const [data, setData] = useState({});
+  const [data, setData] = useCountry({ [summary.Slug]: {} });
 
   useEffect(() => {
     async function getLatestData() {
       try {
         const jsonData = await import(`../assets/data/countries/${summary.Slug}.json`);
-        setData(jsonData);
+        setData({ [summary.Slug]: jsonData });
       } catch (err) {
         pushDataLayer({
           event: 'gaEvent',
@@ -37,24 +38,30 @@ const CountryPage = ({ summary, lastUpdated }) => {
       }
     }
 
-    if (summary && summary.Slug) {
+    if (!data[summary.Slug]) {
       getLatestData();
     }
-  }, [summary]);
+  }, [data, setData, summary.Slug]);
+
+  if (!data[summary.Slug]) {
+    return null;
+  }
 
   return (
     <Layout
-      title={`${data.country} - Ways to help in Coronavirus (COVID-19) panedmic`}
-      description={`Details about different organisations, charities, individuals in ${data.country} who are trying to help the
+      title={`${data[summary.Slug].country} - Ways to help in Coronavirus (COVID-19) panedmic`}
+      description={`Details about different organisations, charities, individuals in ${
+        data[summary.Slug].country
+      } who are trying to help the
           vulnerables during the panedmic of Coronavirus (COVID-19).`}
       canonical={`${APP_HOSTNAME}${APP_BASEPATH}${location.pathname}`}
     >
       <div className="container">
         <div className={style.title}>
-          <h1>{data.country}</h1>
+          <h1>{data[summary.Slug].country}</h1>
           <div className={style.helplines}>
-            {data.helplines &&
-              data.helplines.map((helplineData) => (
+            {data[summary.Slug].helplines &&
+              data[summary.Slug].helplines.map((helplineData) => (
                 <div key={helplineData}>
                   <FormatUrlOrPhone href={helplineData}>{helplineData}</FormatUrlOrPhone>
                 </div>
@@ -64,17 +71,17 @@ const CountryPage = ({ summary, lastUpdated }) => {
         <div className={style.stats}>
           <Covid19Cases summary={summary} lastUpdated={lastUpdated} />
         </div>
-        {data.orgs && Boolean(data.orgs.length) && (
+        {data[summary.Slug].orgs && Boolean(data[summary.Slug].orgs.length) && (
           <div>
             <h2 className="heading">Ways to help</h2>
-            {data.orgs && data.orgs.map((org) => <Organisation key={org.name} org={org} />)}
+            {data[summary.Slug].orgs && data[summary.Slug].orgs.map((org) => <Organisation key={org.name} org={org} />)}
           </div>
         )}
-        {data.links && Boolean(data.links.length) && (
+        {data[summary.Slug].links && Boolean(data[summary.Slug].links.length) && (
           <div className={style.links}>
             <h2 className="heading">Other resources</h2>
-            {data.links &&
-              data.links.map((link) => (
+            {data[summary.Slug].links &&
+              data[summary.Slug].links.map((link) => (
                 <div key={link}>
                   <TickIcon className={style['tick-icon']} />
                   <FormatUrlOrPhone key={link} href={link}>
