@@ -20,7 +20,8 @@ describe('Minimum dataset', () => {
         });
 
         it('should be lowercase and hyphens only', () => {
-          expect(new RegExp('[a-z-]', 'g').test(filename.split('.')[0])).toEqual(true);
+          const [name, ext] = filename.split('.');
+          expect(new RegExp('[a-z-]', 'g').test(name)).toEqual(true);
         });
       });
 
