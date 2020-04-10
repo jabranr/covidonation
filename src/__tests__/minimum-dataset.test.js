@@ -15,8 +15,12 @@ describe('Minimum dataset', () => {
 
     describe(`Minimum datset for ${content.country}`, () => {
       describe('File name', () => {
-        it('should have same filename as slug', () => {
+        it('should be same as slug', () => {
           expect(filename.split('.')[0]).toEqual(content.slug);
+        });
+
+        it('should be lowercase and hyphens only', () => {
+          expect(new RegExp('[a-z-]', 'g').test(filename.split('.')[0])).toEqual(true);
         });
       });
 
