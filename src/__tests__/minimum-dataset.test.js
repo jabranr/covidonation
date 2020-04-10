@@ -14,6 +14,12 @@ describe('Minimum dataset', () => {
     const content = JSON.parse(fileContent);
 
     describe(`Minimum datset for ${content.country}`, () => {
+      describe('File name', () => {
+        it('should have same filename as slug', () => {
+          expect(filename.split('.')[0]).toEqual(content.slug);
+        });
+      });
+
       it('should have country name', () => {
         expect(content).toHaveProperty('country');
       });
