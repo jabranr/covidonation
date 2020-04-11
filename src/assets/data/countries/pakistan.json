@@ -16,6 +16,8 @@
           "twitter": "https://www.twitter.com/JDCOrganization/"
         }
       ],
+      "needHelpWith": ["Money", "Volunteers"],
+      "helpingWith": ["Rations", "PPE"],
       "areasCovered": ["Sindh"]
     },
     {
@@ -34,6 +36,8 @@
           "website": "http://orangetreefoundation.org"
         }
       ],
+      "needHelpWith": ["Money"],
+      "helpingWith": ["Rations", "PPE"],
       "areasCovered": ["Sindh"]
     },
     {
@@ -47,6 +51,8 @@
           "facebook": "https://www.facebook.com/KarachiCCC/"
         }
       ],
+      "needHelpWith": ["Money", "Volunteers"],
+      "helpingWith": ["Rations", "PPE", "Sanitization"],
       "areasCovered": ["Sindh"]
     }
   ]
