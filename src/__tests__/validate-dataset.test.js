@@ -18,8 +18,12 @@ describe('Validate dataset', () => {
               expect(Object.prototype.toString.call(content.helplines)).toEqual('[object Array]');
             });
 
-            it('should have minimum one value', () => {
+            it('should have minimum 1 value', () => {
               expect(content.helplines).not.toHaveLength(0);
+            });
+
+            it('should have maximum 3 values', () => {
+              expect(content.helplines.length).not.toBeGreaterThan(3);
             });
 
             it('should have values as string', () => {
