@@ -108,6 +108,38 @@ describe('Validate dataset', () => {
                 });
               });
 
+              describe('Helping with (required)', () => {
+                it('should have helpingWith', () => {
+                  expect(org).toHaveProperty('helpingWith');
+                });
+
+                it('should have helpingWith as array', () => {
+                  expect(Object.prototype.toString.call(org.helpingWith)).toEqual('[object Array]');
+                });
+
+                it('should have helpingWith values as string', () => {
+                  org.helpingWith.forEach((hw) => {
+                    expect(Object.prototype.toString.call(hw)).toEqual('[object String]');
+                  });
+                });
+              });
+
+              describe('Need help with (required)', () => {
+                it('should have needHelpWith', () => {
+                  expect(org).toHaveProperty('needHelpWith');
+                });
+
+                it('should have needHelpWith as array', () => {
+                  expect(Object.prototype.toString.call(org.needHelpWith)).toEqual('[object Array]');
+                });
+
+                it('should have needHelpWith values as string', () => {
+                  org.needHelpWith.forEach((nhw) => {
+                    expect(Object.prototype.toString.call(nhw)).toEqual('[object String]');
+                  });
+                });
+              });
+
               // contacts
               if (org.contacts) {
                 describe('Contacts (optional)', () => {
