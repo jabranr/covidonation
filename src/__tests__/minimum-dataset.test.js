@@ -46,7 +46,7 @@ describe('Minimum dataset', () => {
       });
 
       it('should have list of orgs as an array', () => {
-        expect(Object.prototype.toString.call(content.orgs)).toBe('[object Array]');
+        expect(Object.prototype.toString.call(content.orgs)).toEqual('[object Array]');
       });
     });
   });
