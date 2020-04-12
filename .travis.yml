@@ -1,24 +1,27 @@
 language: node_js
 
-os:
-  - linux
-  - osx
-
 node_js:
   - 'lts/*'
-  - '10'
-  - '8'
+
+install:
+  - npm install
 
 script:
-  - npm install
   - npm run test
+
+before_deploy:
+  - npm run build
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+
 deploy:
-  script: npm run build
   provider: pages
-  local_dir: ./build
   skip_cleanup: true
-  keep_history: true
   verbose: true
   github_token: $GITHUB_TOKEN
+  local_dir: build
   on:
     branch: master
