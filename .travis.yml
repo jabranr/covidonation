@@ -19,9 +19,10 @@ notifications:
 
 deploy:
   provider: pages
-  skip_cleanup: true
   verbose: true
-  github_token: $GITHUB_TOKEN
+  skip_cleanup: true
+  keep_history: true
   local_dir: build
+  github_token: $GITHUB_TOKEN
   on:
     branch: master
