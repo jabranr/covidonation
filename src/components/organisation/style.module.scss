@@ -4,17 +4,13 @@
   background-color: #fff;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
 
-  @media (min-width: 600px) {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto;
-    grid-column-gap: 2rem;
-    place-items: start;
-  }
-
   & + & {
     margin-top: 2rem;
   }
+}
+
+.header {
+  position: relative;
 }
 
 .name {
@@ -49,6 +45,10 @@
   }
 }
 
+.helping-with {
+  margin-bottom: 1rem;
+}
+
 .hw-title {
   font-size: 0.875rem;
   color: #888;
@@ -74,15 +74,13 @@
 
 .donation-cta {
   display: block;
-  background-color: #fafafa;
+  background-color: #f5555530;
   color: #f55555;
   border-radius: 4px;
   min-width: 100px;
   text-align: center;
   padding: 0.75rem 1rem;
   text-decoration: none;
-  justify-self: end;
-  align-self: start;
   transition: all 0.2s ease-in;
 
   &:hover,
@@ -92,7 +90,9 @@
   }
 
   @media (min-width: 600px) {
-    margin-top: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
