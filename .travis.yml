@@ -12,3 +12,13 @@ node_js:
 script:
   - npm install
   - npm run test
+
+deploy:
+  provider: pages
+  local_dir: build
+  skip_cleanup: true
+  keep_history: true
+  fqdn: https://covidonation.com
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
