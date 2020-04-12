@@ -19,10 +19,12 @@ notifications:
 
 deploy:
   provider: pages
-  verbose: true
   skip_cleanup: true
   keep_history: true
   local_dir: build
+  project_name: covidonation
+  name: Jabran Rafique
+  email: hello@jabran.me
   github_token: $GITHUB_TOKEN
   on:
     branch: master
