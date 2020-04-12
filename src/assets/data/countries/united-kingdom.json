@@ -1,6 +1,7 @@
 {
   "country": "United Kingdom",
   "slug": "united-kingdom",
-  "helplines": ["https://www.gov.uk/coronavirus", "https://www.nhs.uk/coronavirus", "111"],
+  "helplines": ["https://www.nhs.uk/coronavirus", "111"],
+  "links": ["https://www.gov.uk/coronavirus"],
   "orgs": []
 }

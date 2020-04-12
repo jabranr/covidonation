@@ -2,7 +2,7 @@
   "country": "Pakistan",
   "slug": "pakistan",
   "helplines": ["http://www.covid.gov.pk", "1166"],
-  "links": ["http://www.covidwatch.pk", "https://covidreliefpakistan.com"],
+  "links": ["https://www.nih.org.pk", "http://www.covidwatch.pk", "https://covidreliefpakistan.com"],
   "orgs": [
     {
       "name": "JDC Foundation Pakistan",
