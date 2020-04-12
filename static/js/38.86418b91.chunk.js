@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[38],{119:function(o){o.exports=JSON.parse('{"country":"Burkina Faso","slug":"burkina-faso","orgs":[]}')}}]);
+//# sourceMappingURL=38.86418b91.chunk.js.map

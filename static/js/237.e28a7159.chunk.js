@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[237],{318:function(o){o.exports=JSON.parse('{"country":"United Kingdom","slug":"united-kingdom","helplines":["https://www.nhs.uk/coronavirus","111"],"links":["https://www.gov.uk/coronavirus"],"orgs":[]}')}}]);
+//# sourceMappingURL=237.e28a7159.chunk.js.map
