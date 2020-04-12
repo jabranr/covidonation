@@ -2,7 +2,7 @@
   "country": "Pakistan",
   "slug": "pakistan",
   "helplines": ["http://www.covid.gov.pk", "1166"],
-  "links": ["http://www.covidwatch.pk"],
+  "links": ["https://www.nih.org.pk", "http://www.covidwatch.pk", "https://covidreliefpakistan.com"],
   "orgs": [
     {
       "name": "JDC Foundation Pakistan",
@@ -16,7 +16,9 @@
           "twitter": "https://www.twitter.com/JDCOrganization/"
         }
       ],
-      "areasCovered": ["Sindh"]
+      "needHelpWith": ["Money", "Volunteers"],
+      "helpingWith": ["Rations", "PPE"],
+      "areasCovered": ["Sindh", "Balochistan"]
     },
     {
       "name": "Robin Hood Army / Orange Tree Foundation",
@@ -34,6 +36,8 @@
           "website": "http://orangetreefoundation.org"
         }
       ],
+      "needHelpWith": ["Money"],
+      "helpingWith": ["Rations", "PPE"],
       "areasCovered": ["Sindh"]
     },
     {
@@ -47,6 +51,8 @@
           "facebook": "https://www.facebook.com/KarachiCCC/"
         }
       ],
+      "needHelpWith": ["Money", "Volunteers"],
+      "helpingWith": ["Rations", "PPE", "Sanitization"],
       "areasCovered": ["Sindh"]
     }
   ]

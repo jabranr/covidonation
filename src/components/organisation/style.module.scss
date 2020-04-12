@@ -4,17 +4,13 @@
   background-color: #fff;
   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1);
 
-  @media (min-width: 600px) {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto;
-    grid-column-gap: 2rem;
-    place-items: start;
-  }
-
   & + & {
     margin-top: 2rem;
   }
+}
+
+.header {
+  position: relative;
 }
 
 .name {
@@ -33,30 +29,58 @@
   color: #888;
   margin-bottom: 0;
   margin-top: 5px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
 }
 
 .ac-link {
   color: #888;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  & + & {
+    margin-left: 5px;
+  }
+}
+
+.helping-with {
+  margin-bottom: 1rem;
+}
+
+.hw-title {
+  font-size: 0.875rem;
+  color: #888;
+  margin-right: 10px;
+}
+
+.hw-items {
+  background-color: #eee;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+
+  & + & {
+    margin-left: 5px;
+  }
 }
 
 .description {
-  color: #666;
+  color: #888;
   margin-top: 1rem;
 }
 
 .donation-cta {
   display: block;
-  background-color: #fafafa;
+  background-color: #f5555530;
   color: #f55555;
   border-radius: 4px;
   min-width: 100px;
   text-align: center;
   padding: 0.75rem 1rem;
   text-decoration: none;
-  justify-self: end;
-  align-self: start;
   transition: all 0.2s ease-in;
 
   &:hover,
@@ -66,7 +90,9 @@
   }
 
   @media (min-width: 600px) {
-    margin-top: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
@@ -102,7 +128,8 @@
 }
 
 .website {
-  color: #333;
+  font-size: 14px;
+  color: #888;
 
   &:hover,
   &:active {

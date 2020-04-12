@@ -71,26 +71,29 @@ const CountryPage = ({ summary, lastUpdated }) => {
         <div className={style.stats}>
           <Covid19Cases summary={summary} lastUpdated={lastUpdated} />
         </div>
-        {data[summary.Slug].orgs && Boolean(data[summary.Slug].orgs.length) && (
-          <div>
-            <h2 className="heading">Ways to help</h2>
-            {data[summary.Slug].orgs && data[summary.Slug].orgs.map((org) => <Organisation key={org.name} org={org} />)}
-          </div>
-        )}
-        {data[summary.Slug].links && Boolean(data[summary.Slug].links.length) && (
-          <div className={style.links}>
-            <h2 className="heading">Other resources</h2>
-            {data[summary.Slug].links &&
-              data[summary.Slug].links.map((link) => (
-                <div key={link}>
+        <div className={style['content']}>
+          {data[summary.Slug].orgs && Boolean(data[summary.Slug].orgs.length) && (
+            <div>
+              <h2 className="heading">Ways to help</h2>
+              {data[summary.Slug].orgs.map((org) => (
+                <Organisation key={org.name} org={org} />
+              ))}
+            </div>
+          )}
+          {data[summary.Slug].links && Boolean(data[summary.Slug].links.length) && (
+            <div className={style.links}>
+              <h2 className="heading">Other resources</h2>
+              {data[summary.Slug].links.map((link) => (
+                <div key={link} className={style.link}>
                   <TickIcon className={style['tick-icon']} />
                   <FormatUrlOrPhone key={link} href={link}>
                     {link}
                   </FormatUrlOrPhone>
                 </div>
               ))}
-          </div>
-        )}
+            </div>
+          )}
+        </div>
       </div>
     </Layout>
   );

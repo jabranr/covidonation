@@ -34,7 +34,12 @@ const Covid19Cases = ({ summary, lastUpdated }) => {
             <FormatUrlOrPhone href="https://everytimezone.com">UTC</FormatUrlOrPhone>
           </li>
         )}
-        <li>Data from JHU, CSSE, WHO via covid19api.com</li>
+        <li>
+          Data source:{' '}
+          <a href="https://covid19api.com?utm_source=covidonation" target="_blank" rel="noopener noreferrer">
+            covid19api.com
+          </a>
+        </li>
       </ul>
     </div>
   );

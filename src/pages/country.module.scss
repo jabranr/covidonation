@@ -28,11 +28,36 @@
   }
 }
 
+.content {
+  @media (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+
 .links {
   margin-top: 2rem;
+  white-space: break-word;
+
+  @media (min-width: 1000px) {
+    margin-top: 0;
+  }
+}
+
+.link {
+  white-space: nowrap;
+
+  & + & {
+    margin-top: 0.5rem;
+
+    @media (min-width: 1000px) {
+      margin-top: 1rem;
+    }
+  }
 }
 
 .tick-icon {
-  margin-right: 5px;
+  margin-right: 8px;
   color: #888;
 }

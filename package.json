@@ -14,7 +14,8 @@
     "test:watch": "npm test -- -u --watch",
     "test:coverage": "npm test -- --coverage --watchAll=false --reporters=default --reporters=jest-junit",
     "format": "prettier --write \"src/**/*.{js,html,css,scss,json}\"",
-    "deploy": "npm run build && gh-pages -d build -b gh-pages"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -b gh-pages"
   },
   "keywords": [
     "coronavirus",

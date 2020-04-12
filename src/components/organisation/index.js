@@ -67,10 +67,10 @@ const ChevronUpIcon = ({ width = 18, height = 16, ...attrs }) => {
   );
 };
 
-const isInViewport = function (elem) {
+const isInViewport = function (elem, stickyHeaderOffset = 100) {
   const bounding = elem.getBoundingClientRect();
   return (
-    bounding.top >= 0 &&
+    bounding.top >= 0 + stickyHeaderOffset &&
     bounding.left >= 0 &&
     bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
@@ -100,58 +100,70 @@ const Organisation = ({ org }) => {
 
   return (
     <div ref={cardRef} className={style.org}>
-      <h3 className={style.name}>{org.name}</h3>
-      {org.areasCovered && Boolean(org.areasCovered.length) && (
-        <div className={style['areas-covered']}>
-          <LocationIcon />
-          <div>
-            {org.areasCovered.map((areaCovered) => (
-              <a
-                key={areaCovered}
-                className={style['ac-link']}
-                onClick={() => {
-                  pushDataLayer({
-                    event: 'gaEvent',
-                    gaCategory: 'Areas covered CTA',
-                    gaAction: areaCovered,
-                    gaLabel: org.name
-                  });
-                }}
-                target="_blank"
-                rel="noopener noreferrer"
-                href={`//maps.google.com?q=${areaCovered}`}
-              >
-                {areaCovered}
-              </a>
+      <div className={style.header}>
+        <h3 className={style.name}>{org.name}</h3>
+        {Boolean(org.areasCovered.length) && (
+          <div className={style['areas-covered']}>
+            <LocationIcon />
+            <div>
+              {org.areasCovered.map((areaCovered) => (
+                <a
+                  key={areaCovered}
+                  className={style['ac-link']}
+                  onClick={() => {
+                    pushDataLayer({
+                      event: 'gaEvent',
+                      gaCategory: 'Areas covered CTA',
+                      gaAction: areaCovered,
+                      gaLabel: org.name
+                    });
+                  }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`//maps.google.com?q=${areaCovered}`}
+                >
+                  {areaCovered}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+        {Boolean(org.helpingWith) && (
+          <div className={style['helping-with']}>
+            <span className={style['hw-title']}>Helping with</span>
+            {org.helpingWith.map((hw) => (
+              <span key={hw} className={style['hw-items']}>
+                {hw}
+              </span>
             ))}
           </div>
-        </div>
-      )}
+        )}
+        <FormatUrlOrPhone
+          href={org.donation}
+          className={style['donation-cta']}
+          onClick={() => {
+            pushDataLayer({
+              event: 'gaEvent',
+              gaCategory: 'Make a donation CTA',
+              gaAction: org.name
+            });
+          }}
+        >
+          {/[0-9-+ ]/.test(org.donation) ? (
+            <PhoneIcon className={style['cta-icon']} />
+          ) : (
+            <WebIcon className={style['cta-icon']} />
+          )}{' '}
+          Make a donation
+        </FormatUrlOrPhone>
+      </div>
+
       <p
         className={style.description}
         dangerouslySetInnerHTML={{
           __html: isDetailedView ? org.description : `${org.description.substring(0, 150)}...`
         }}
       />
-
-      <FormatUrlOrPhone
-        href={org.donation}
-        className={style['donation-cta']}
-        onClick={() => {
-          pushDataLayer({
-            event: 'gaEvent',
-            gaCategory: 'Make a donation CTA',
-            gaAction: org.name
-          });
-        }}
-      >
-        {/[0-9-+ ]/.test(org.donation) ? (
-          <PhoneIcon className={style['cta-icon']} />
-        ) : (
-          <WebIcon className={style['cta-icon']} />
-        )}{' '}
-        Make a donation
-      </FormatUrlOrPhone>
 
       {Boolean(org.contacts && org.contacts.length) && (
         <div ref={contactRef} className={style.contacts} style={{ '--height': `0px` }}>
@@ -221,9 +233,8 @@ const Organisation = ({ org }) => {
                 type="button"
                 onClick={() => {
                   setDetailedView((currValue) => {
-                    const root = document.documentElement;
                     if (currValue) {
-                      root.style.setProperty('--contacts-height', `0px`);
+                      contactRef.current.style.setProperty('--contacts-height', `0px`);
                     } else {
                       pushDataLayer({
                         event: 'gaEvent',
@@ -231,7 +242,7 @@ const Organisation = ({ org }) => {
                         gaAction: org.name
                       });
 
-                      root.style.setProperty('--contacts-height', `${contactRef.current.scrollHeight}px`);
+                      contactRef.current.style.setProperty('--contacts-height', `${contactRef.current.scrollHeight}px`);
 
                       // wait for animation to finish before scrolling
                       setTimeout(() => {
