@@ -33,16 +33,42 @@
   color: #888;
   margin-bottom: 0;
   margin-top: 5px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
 }
 
 .ac-link {
   color: #888;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  & + & {
+    margin-left: 5px;
+  }
+}
+
+.hw-title {
+  font-size: 0.875rem;
+  color: #888;
+  margin-right: 10px;
+}
+
+.hw-items {
+  background-color: #eee;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+
+  & + & {
+    margin-left: 5px;
+  }
 }
 
 .description {
-  color: #666;
+  color: #888;
   margin-top: 1rem;
 }
 
@@ -102,7 +128,8 @@
 }
 
 .website {
-  color: #333;
+  font-size: 14px;
+  color: #888;
 
   &:hover,
   &:active {

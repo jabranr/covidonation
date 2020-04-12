@@ -67,10 +67,10 @@ const ChevronUpIcon = ({ width = 18, height = 16, ...attrs }) => {
   );
 };
 
-const isInViewport = function (elem) {
+const isInViewport = function (elem, stickyHeaderOffset = 100) {
   const bounding = elem.getBoundingClientRect();
   return (
-    bounding.top >= 0 &&
+    bounding.top >= 0 + stickyHeaderOffset &&
     bounding.left >= 0 &&
     bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
@@ -127,12 +127,20 @@ const Organisation = ({ org }) => {
           </div>
         </div>
       )}
-      <p
-        className={style.description}
-        dangerouslySetInnerHTML={{
-          __html: isDetailedView ? org.description : `${org.description.substring(0, 150)}...`
-        }}
-      />
+      <div>
+        <div>
+          <span className={style['hw-title']}>Helping with</span>
+          {org.helpingWith.map((hw) => (
+            <span className={style['hw-items']}>{hw}</span>
+          ))}
+        </div>
+        <p
+          className={style.description}
+          dangerouslySetInnerHTML={{
+            __html: isDetailedView ? org.description : `${org.description.substring(0, 150)}...`
+          }}
+        />
+      </div>
 
       <FormatUrlOrPhone
         href={org.donation}
@@ -221,9 +229,8 @@ const Organisation = ({ org }) => {
                 type="button"
                 onClick={() => {
                   setDetailedView((currValue) => {
-                    const root = document.documentElement;
                     if (currValue) {
-                      root.style.setProperty('--contacts-height', `0px`);
+                      contactRef.current.style.setProperty('--contacts-height', `0px`);
                     } else {
                       pushDataLayer({
                         event: 'gaEvent',
@@ -231,7 +238,7 @@ const Organisation = ({ org }) => {
                         gaAction: org.name
                       });
 
-                      root.style.setProperty('--contacts-height', `${contactRef.current.scrollHeight}px`);
+                      contactRef.current.style.setProperty('--contacts-height', `${contactRef.current.scrollHeight}px`);
 
                       // wait for animation to finish before scrolling
                       setTimeout(() => {
