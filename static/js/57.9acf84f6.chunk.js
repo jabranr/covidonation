@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[57],{138:function(o){o.exports=JSON.parse('{"country":"C\xf4te d\'Ivoire","slug":"cote-divoire","orgs":[]}')}}]);
-//# sourceMappingURL=57.9acf84f6.chunk.js.map

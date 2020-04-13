@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[236],{317:function(o){o.exports=JSON.parse('{"country":"United Arab Emirates","slug":"united-arab-emirates","orgs":[]}')}}]);
-//# sourceMappingURL=236.18cbdc0c.chunk.js.map

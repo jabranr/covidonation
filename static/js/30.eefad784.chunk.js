@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[30],{127:function(o){o.exports=JSON.parse('{"country":"Bosnia and Herzegovina","slug":"bosnia-and-herzegovina","orgs":[]}')}}]);
+//# sourceMappingURL=30.eefad784.chunk.js.map

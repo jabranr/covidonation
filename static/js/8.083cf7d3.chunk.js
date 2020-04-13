@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[8],{89:function(o){o.exports=JSON.parse('{"country":"Andorra","slug":"andorra","orgs":[]}')}}]);
-//# sourceMappingURL=8.083cf7d3.chunk.js.map

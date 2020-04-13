@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[74],{155:function(o){o.exports=JSON.parse('{"country":"Faroe Islands","slug":"faroe-islands","orgs":[]}')}}]);
-//# sourceMappingURL=74.b8052909.chunk.js.map

@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[228],{309:function(o){o.exports=JSON.parse('{"country":"Trinidad and Tobago","slug":"trinidad-and-tobago","orgs":[]}')}}]);
-//# sourceMappingURL=228.aadfed21.chunk.js.map

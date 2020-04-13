@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[192],{273:function(n){n.exports=JSON.parse('{"country":"Saint-Martin (French part)","slug":"saint-martin-french-part","orgs":[]}')}}]);
-//# sourceMappingURL=192.217dc765.chunk.js.map

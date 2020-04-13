@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[4],{85:function(n){n.exports=JSON.parse('{"country":"ALA Aland Islands","slug":"ala-aland-islands","orgs":[]}')}}]);
-//# sourceMappingURL=4.8bb5e1c4.chunk.js.map

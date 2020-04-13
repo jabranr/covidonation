@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[98],{195:function(n){n.exports=JSON.parse('{"country":"Heard and Mcdonald Islands","slug":"heard-and-mcdonald-islands","orgs":[]}')}}]);
+//# sourceMappingURL=98.6d8121fc.chunk.js.map

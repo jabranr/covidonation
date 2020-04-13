@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[215],{296:function(a){a.exports=JSON.parse('{"country":"Svalbard and Jan Mayen Islands","slug":"svalbard-and-jan-mayen-islands","orgs":[]}')}}]);
-//# sourceMappingURL=215.bd313d50.chunk.js.map

@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[219],{316:function(o){o.exports=JSON.parse('{"country":"Syrian Arab Republic (Syria)","slug":"syria","orgs":[]}')}}]);
+//# sourceMappingURL=219.3fc91668.chunk.js.map

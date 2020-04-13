@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[188],{285:function(o){o.exports=JSON.parse('{"country":"Saint-Barth\xe9lemy","slug":"saint-barthelemy","orgs":[]}')}}]);
+//# sourceMappingURL=188.1cfbe600.chunk.js.map

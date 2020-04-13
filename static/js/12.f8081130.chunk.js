@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[12],{93:function(a){a.exports=JSON.parse('{"country":"Antigua and Barbuda","slug":"antigua-and-barbuda","orgs":[]}')}}]);
-//# sourceMappingURL=12.f8081130.chunk.js.map

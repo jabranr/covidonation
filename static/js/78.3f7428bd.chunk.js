@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[78],{159:function(n){n.exports=JSON.parse('{"country":"French Guiana","slug":"french-guiana","orgs":[]}')}}]);
-//# sourceMappingURL=78.3f7428bd.chunk.js.map

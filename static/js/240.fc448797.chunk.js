@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[240],{321:function(n){n.exports=JSON.parse('{"country":"US Minor Outlying Islands","slug":"us-minor-outlying-islands","orgs":[]}')}}]);
-//# sourceMappingURL=240.fc448797.chunk.js.map
