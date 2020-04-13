@@ -5,7 +5,6 @@ import { createBrowserHistory } from 'history';
 import './config/typography';
 import config from './config';
 import SummaryProvider from './store/summary-provider';
-import CountryProvider from './store/country-provider';
 import Routing from './routing';
 import { pushDataLayer } from './util';
 
@@ -38,9 +37,7 @@ const App = () => {
   return (
     <Router history={history} basename={APP_BASEPATH}>
       <SummaryProvider>
-        <CountryProvider>
-          <Routing />
-        </CountryProvider>
+        <Routing />
       </SummaryProvider>
     </Router>
   );

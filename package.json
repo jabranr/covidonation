@@ -48,6 +48,9 @@
     "react-scripts": "^3.4.1",
     "typography": "^0.16.19"
   },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "prettier": "@jabranr-lab/prettier",
   "browserslist": {
     "production": [
