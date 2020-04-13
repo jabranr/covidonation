@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { find } from 'lodash-es';
 
 import Layout from '../components/layout';
 import Covid19Cases from '../components/covid19cases';
 import Organisation from '../components/organisation';
 import FormatUrlOrPhone from '../components/format-url-or-phone';
-import useCountry from '../store/country-hook';
+import useSummary from '../store/summary-hook';
 import config from '../config';
 import { pushDataLayer } from '../util';
 
 import style from './country.module.scss';
+import { isEmpty } from 'lodash-es';
 
 const { APP_HOSTNAME, APP_BASEPATH } = config();
 
@@ -19,15 +21,16 @@ const TickIcon = ({ width = 16, height = 14, ...attrs }) => (
   </svg>
 );
 
-const CountryPage = ({ summary, lastUpdated }) => {
+const CountryPage = ({ slug }) => {
   const location = useLocation();
-  const [data, setData] = useCountry({ [summary.Slug]: {} });
+  const [summary] = useSummary();
+  const [waysToHelp, setWaysToHelp] = useState({});
 
   useEffect(() => {
     async function getLatestData() {
       try {
-        const jsonData = await import(`../assets/data/countries/${summary.Slug}.json`);
-        setData({ [summary.Slug]: jsonData });
+        const jsonData = await import(`../assets/data/countries/${slug}.json`);
+        setWaysToHelp(jsonData);
       } catch (err) {
         pushDataLayer({
           event: 'gaEvent',
@@ -38,30 +41,28 @@ const CountryPage = ({ summary, lastUpdated }) => {
       }
     }
 
-    if (!data[summary.Slug]) {
+    if (isEmpty(waysToHelp)) {
       getLatestData();
     }
-  }, [data, setData, summary.Slug]);
+  }, [waysToHelp, setWaysToHelp, slug]);
 
-  if (!data[summary.Slug]) {
+  if (isEmpty(waysToHelp)) {
     return null;
   }
 
   return (
     <Layout
-      title={`${data[summary.Slug].country} - Ways to help in Coronavirus (COVID-19) panedmic`}
-      description={`Details about different organisations, charities, individuals in ${
-        data[summary.Slug].country
-      } who are trying to help the
+      title={`${waysToHelp.country} - Ways to help in Coronavirus (COVID-19) panedmic`}
+      description={`Details about different organisations, charities, individuals in ${waysToHelp.country} who are trying to help the
           vulnerables during the panedmic of Coronavirus (COVID-19).`}
       canonical={`${APP_HOSTNAME}${APP_BASEPATH}${location.pathname}`}
     >
       <div className="container">
         <div className={style.title}>
-          <h1>{data[summary.Slug].country}</h1>
+          <h1>{waysToHelp.country}</h1>
           <div className={style.helplines}>
-            {data[summary.Slug].helplines &&
-              data[summary.Slug].helplines.map((helplineData) => (
+            {waysToHelp.helplines &&
+              waysToHelp.helplines.map((helplineData) => (
                 <div key={helplineData}>
                   <FormatUrlOrPhone href={helplineData}>{helplineData}</FormatUrlOrPhone>
                 </div>
@@ -69,21 +70,47 @@ const CountryPage = ({ summary, lastUpdated }) => {
           </div>
         </div>
         <div className={style.stats}>
-          <Covid19Cases summary={summary} lastUpdated={lastUpdated} />
+          <Covid19Cases summary={find(summary.data, { Slug: slug })} lastUpdated={summary.lastUpdated} />
         </div>
         <div className={style['content']}>
-          {data[summary.Slug].orgs && Boolean(data[summary.Slug].orgs.length) && (
+          {Boolean(waysToHelp.orgs.length) ? (
             <div>
               <h2 className="heading">Ways to help</h2>
-              {data[summary.Slug].orgs.map((org) => (
+              {waysToHelp.orgs.map((org) => (
                 <Organisation key={org.name} org={org} />
               ))}
             </div>
+          ) : (
+            <div>
+              <h4>There is no data available for {waysToHelp.country} 😞</h4>
+              <p>
+                But good news is that you can{' '}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://github.com/jabranr/covidonation/blob/master/src/assets/data/countries/${waysToHelp.slug}.json`}
+                >
+                  edit this file
+                </a>{' '}
+                to update data that will help the humanity. 😀
+              </p>
+              <p>
+                Here is some guidance on{' '}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/jabranr/covidonation#how-to-contribute"
+                >
+                  contributing
+                </a>{' '}
+                the data for a country.
+              </p>
+            </div>
           )}
-          {data[summary.Slug].links && Boolean(data[summary.Slug].links.length) && (
+          {waysToHelp.links && Boolean(waysToHelp.links.length) && (
             <div className={style.links}>
               <h2 className="heading">Other resources</h2>
-              {data[summary.Slug].links.map((link) => (
+              {waysToHelp.links.map((link) => (
                 <div key={link} className={style.link}>
                   <TickIcon className={style['tick-icon']} />
                   <FormatUrlOrPhone key={link} href={link}>
@@ -92,6 +119,16 @@ const CountryPage = ({ summary, lastUpdated }) => {
                 </div>
               ))}
             </div>
+          )}
+          {Boolean(waysToHelp.orgs.length) && (
+            <a
+              className={style['update-data']}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://github.com/jabranr/covidonation/blob/master/src/assets/data/countries/${waysToHelp.slug}.json`}
+            >
+              Update data for {waysToHelp.country} &raquo;
+            </a>
           )}
         </div>
       </div>
