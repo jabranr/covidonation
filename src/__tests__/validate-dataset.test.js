@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const countries = require('../assets/data');
 const countryFilesPath = path.resolve(__dirname, '../assets/data/countries');
 const countryFilesList = fs.readdirSync(countryFilesPath);
 

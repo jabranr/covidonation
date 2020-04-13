@@ -25,8 +25,8 @@ const HomePage = () => {
         </p>
         <div className={style['countries-list']}>
           {countries.map((country) => (
-            <Link className={style['country-link']} to={`/${country}`} key={country}>
-              {country}
+            <Link className={style['country-link']} to={`/${country.slug}`} key={country.slug}>
+              {country.name}
             </Link>
           ))}
         </div>

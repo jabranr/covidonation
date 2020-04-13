@@ -12,14 +12,14 @@ const Routing = () => {
   return (
     <Switch>
       <CovidRoute exact path="/" component={HomePage} />
-      {countries.map((slug) => (
+      {countries.map((c) => (
         <CovidRoute
-          path={`/${slug}`}
-          slug={slug}
+          path={`/${c.slug}`}
+          slug={c.slug}
           render={(props) => {
-            return <CountryPage slug={slug} {...props} />;
+            return <CountryPage slug={c.slug} {...props} />;
           }}
-          key={slug}
+          key={c.slug}
         />
       ))}
       <Route exact path="*" component={NotFound} />
