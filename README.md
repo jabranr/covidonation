@@ -40,7 +40,7 @@ If you would like to report an issue or suggest something then [create an issue]
 | Name of the Organization (R)          | `name`         | String        |
 | Description of the Organization (R)   | `description`  | String        |
 | Contacts (R)                          | `contacts`     | Array(String) |
-| Donation Links (R)                    | `donation`     | String        |
+| Donation Link / Phone number (R)      | `donation`     | String        |
 | Social Links (O)                      | `social`       | Array(Object) |
 | Need help with (R)                    | `needHelpWith` | Array(String) |
 | Organization helping with (R)         | `helpingWith`  | Array(String) |
