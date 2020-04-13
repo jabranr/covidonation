@@ -57,7 +57,7 @@ const Layout = ({ title, description, canonical, children }) => {
       <footer className={style.footer}>
         <div>&copy; 2020 - MIT License</div>
         <div>
-          Data sources are JHU, CSSE and WHO via{' '}
+          Data sources are JHU CSSE and WHO via{' '}
           <a target="_blank" rel="noopener noreferrer" href="https://www.covid19api.com?utm_source=covidonation">
             www.covid19api.com
           </a>

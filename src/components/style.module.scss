@@ -16,7 +16,7 @@
   text-align: left;
 
   @media (min-width: 600px) {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
     place-items: center;
   }
 }
