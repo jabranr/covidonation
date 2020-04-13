@@ -73,12 +73,38 @@ const CountryPage = ({ slug }) => {
           <Covid19Cases summary={find(summary.data, { Slug: slug })} lastUpdated={summary.lastUpdated} />
         </div>
         <div className={style['content']}>
-          {waysToHelp.orgs && Boolean(waysToHelp.orgs.length) && (
+          {Boolean(waysToHelp.orgs.length) ? (
             <div>
               <h2 className="heading">Ways to help</h2>
               {waysToHelp.orgs.map((org) => (
                 <Organisation key={org.name} org={org} />
               ))}
+            </div>
+          ) : (
+            <div>
+              <h4>There is no data available for {waysToHelp.country} 😞</h4>
+              <p>
+                But good news is that you can{' '}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://github.com/jabranr/covidonation/blob/master/src/assets/data/countries/${waysToHelp.slug}.json`}
+                >
+                  edit this file
+                </a>{' '}
+                to update data that will help the humanity. 😀
+              </p>
+              <p>
+                Here is some guidance on{' '}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/jabranr/covidonation#how-to-contribute"
+                >
+                  contributing
+                </a>{' '}
+                the data for a country.
+              </p>
             </div>
           )}
           {waysToHelp.links && Boolean(waysToHelp.links.length) && (
@@ -93,6 +119,16 @@ const CountryPage = ({ slug }) => {
                 </div>
               ))}
             </div>
+          )}
+          {Boolean(waysToHelp.orgs.length) && (
+            <a
+              className={style['update-data']}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://github.com/jabranr/covidonation/blob/master/src/assets/data/countries/${waysToHelp.slug}.json`}
+            >
+              Update data for {waysToHelp.country} &raquo;
+            </a>
           )}
         </div>
       </div>
