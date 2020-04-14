@@ -5,12 +5,12 @@ const FormatUrlOrPhone = ({ href, children, ...attr }) => {
 
   if (attr.target === '_blank') {
     attr.target = '_blank';
-    attr.rel = 'noopener noreferrer';
+    attr.rel = 'noopener';
   }
 
   if (/^http/i.test(href)) {
     return (
-      <a target="_blank" rel="noopener noreferrer" href={`${href}?utm_source=covidonation`} {...attr}>
+      <a target="_blank" rel="noopener" href={`${href}?utm_source=covidonation`} {...attr}>
         {children}
       </a>
     );
@@ -18,7 +18,7 @@ const FormatUrlOrPhone = ({ href, children, ...attr }) => {
 
   if (/^www/i.test(href)) {
     return (
-      <a target="_blank" rel="noopener noreferrer" href={`//${href}?utm_source=covidonation`} {...attr}>
+      <a target="_blank" rel="noopener" href={`//${href}?utm_source=covidonation`} {...attr}>
         {children}
       </a>
     );

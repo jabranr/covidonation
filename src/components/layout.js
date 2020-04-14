@@ -58,21 +58,17 @@ const Layout = ({ title, description, canonical, children }) => {
         <div>&copy; 2020 - MIT License</div>
         <div>
           Data sources are JHU CSSE and WHO via{' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://www.covid19api.com?utm_source=covidonation">
+          <a target="_blank" rel="noopener" href="https://www.covid19api.com?utm_source=covidonation">
             www.covid19api.com
           </a>
         </div>
         <div className={style['colophone']}>
           Get in touch at{' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/jabranr?utm_source=covidonation">
+          <a target="_blank" rel="noopener" href="https://www.twitter.com/jabranr?utm_source=covidonation">
             Twitter
           </a>
           &nbsp;&bull;&nbsp;Contribute at{' '}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.github.com/jabranr/covidonation?utm_source=covidonation"
-          >
+          <a target="_blank" rel="noopener" href="https://www.github.com/jabranr/covidonation?utm_source=covidonation">
             GitHub
           </a>
         </div>

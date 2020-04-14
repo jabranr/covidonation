@@ -36,7 +36,7 @@ const Covid19Cases = ({ summary, lastUpdated }) => {
         )}
         <li>
           Data source:{' '}
-          <a href="https://covid19api.com?utm_source=covidonation" target="_blank" rel="noopener noreferrer">
+          <a href="https://covid19api.com?utm_source=covidonation" target="_blank" rel="noopener">
             covid19api.com
           </a>
         </li>

@@ -87,7 +87,7 @@ const CountryPage = ({ slug }) => {
                 But good news is that you can{' '}
                 <a
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   href={`https://github.com/jabranr/covidonation/blob/master/src/assets/data/countries/${waysToHelp.slug}.json`}
                 >
                   edit this file
@@ -96,11 +96,7 @@ const CountryPage = ({ slug }) => {
               </p>
               <p>
                 Here is some guidance on{' '}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/jabranr/covidonation#how-to-contribute"
-                >
+                <a target="_blank" rel="noopener" href="https://github.com/jabranr/covidonation#how-to-contribute">
                   contributing
                 </a>{' '}
                 the data for a country.
@@ -124,7 +120,7 @@ const CountryPage = ({ slug }) => {
             <a
               className={style['update-data']}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               href={`https://github.com/jabranr/covidonation/blob/master/src/assets/data/countries/${waysToHelp.slug}.json`}
             >
               Update data for {waysToHelp.country} &raquo;

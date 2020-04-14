@@ -119,7 +119,7 @@ const Organisation = ({ org }) => {
                     });
                   }}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   href={`//maps.google.com?q=${areaCovered}`}
                 >
                   {areaCovered}
