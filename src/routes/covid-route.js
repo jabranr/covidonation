@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import dayjs from 'dayjs';
 
-import apiClient from './config/api-client';
-import useSummary from './store/summary-hook';
-import config from './config';
-import { pushDataLayer } from './util';
+import apiClient from '../config/api-client';
+import useSummary from '../store/summary-hook';
+import config from '../config';
+import { pushDataLayer } from '../util';
 
 const { IS_PRODUCTION } = config();
 
