@@ -1,5 +1,1 @@
-{
-  "country": "Germany",
-  "slug": "germany",
-  "orgs": []
-}
+{ "country": "Germany", "slug": "germany", "orgs": [], "iso2Code": "DE", "iso3Code": "DEU" }

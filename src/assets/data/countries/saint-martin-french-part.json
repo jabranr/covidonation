@@ -1,5 +1,7 @@
 {
   "country": "Saint-Martin (French part)",
   "slug": "saint-martin-french-part",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "MF",
+  "iso3Code": "MAF"
 }

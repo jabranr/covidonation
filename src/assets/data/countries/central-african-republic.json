@@ -1,5 +1,7 @@
 {
   "country": "Central African Republic",
   "slug": "central-african-republic",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "CF",
+  "iso3Code": "CAF"
 }

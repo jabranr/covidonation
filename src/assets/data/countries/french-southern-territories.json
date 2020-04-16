@@ -1,5 +1,7 @@
 {
   "country": "French Southern Territories",
   "slug": "french-southern-territories",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "TF",
+  "iso3Code": "ATF"
 }
