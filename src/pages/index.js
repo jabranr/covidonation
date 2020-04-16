@@ -45,6 +45,8 @@ const HomePage = () => {
                   <img
                     ref={(imgEl) => (imagesRef.current[i] = imgEl)}
                     loading="lazy"
+                    width="100%"
+                    height="125px"
                     className="lazyload"
                     data-src={`${APP_BASEPATH}/assets/flags/${country.iso2.toLowerCase()}.svg`}
                     alt=""
