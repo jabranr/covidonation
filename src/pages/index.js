@@ -13,7 +13,7 @@ const HomePage = () => {
   const imagesRef = useRef([]);
 
   useEffect(() => {
-    if (!('loading' in HTMLImageElement.prototype)) {
+    if ('loading' in HTMLImageElement.prototype) {
       imagesRef.current.forEach((img) => (img.src = img.getAttribute('data-src')));
     } else {
       // eslint-disable-next-line no-unused-expressions
