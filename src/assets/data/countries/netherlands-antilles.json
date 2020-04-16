@@ -1,1 +1,7 @@
-{ "country": "Netherlands Antilles", "slug": "netherlands-antilles", "orgs": [], "iso2Code": "AN" }
+{
+  "country": "Netherlands Antilles",
+  "slug": "netherlands-antilles",
+  "orgs": [],
+  "iso2Code": "AN",
+  "iso3Code": "ANT"
+}
