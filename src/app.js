@@ -17,14 +17,7 @@ const history = createBrowserHistory({
 // Register page view on app navigation
 history.listen((location, action) => {
   if (location.pathname !== '/' && action === 'PUSH') {
-    if ('scrollBehavior' in document.documentElement.style) {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    } else {
-      window.scrollTo(0, 0);
-    }
+    window.scrollTo(0, 0);
   }
 
   pushDataLayer({
