@@ -1,5 +1,7 @@
 {
   "country": "Svalbard and Jan Mayen Islands",
   "slug": "svalbard-and-jan-mayen-islands",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "SJ",
+  "iso3Code": "SJM"
 }

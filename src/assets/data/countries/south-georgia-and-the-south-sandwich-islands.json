@@ -1,5 +1,7 @@
 {
   "country": "South Georgia and the South Sandwich Islands",
   "slug": "south-georgia-and-the-south-sandwich-islands",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "GS",
+  "iso3Code": "SGS"
 }

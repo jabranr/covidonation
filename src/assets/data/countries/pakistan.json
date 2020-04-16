@@ -31,11 +31,7 @@
         "info@orangetreefoundation.org"
       ],
       "donation": "+923000225518",
-      "social": [
-        {
-          "website": "http://orangetreefoundation.org"
-        }
-      ],
+      "social": [{ "website": "http://orangetreefoundation.org" }],
       "needHelpWith": ["Money"],
       "helpingWith": ["Rations", "PPE"],
       "areasCovered": ["Sindh"]
@@ -46,14 +42,13 @@
       "contacts": ["+923323400595"],
       "donation": "+923323400595",
       "social": [
-        {
-          "website": "https://www.facebook.com/KarachiCCC/",
-          "facebook": "https://www.facebook.com/KarachiCCC/"
-        }
+        { "website": "https://www.facebook.com/KarachiCCC/", "facebook": "https://www.facebook.com/KarachiCCC/" }
       ],
       "needHelpWith": ["Money", "Volunteers"],
       "helpingWith": ["Rations", "PPE", "Sanitization"],
       "areasCovered": ["Sindh"]
     }
-  ]
+  ],
+  "iso2Code": "PK",
+  "iso3Code": "PAK"
 }

@@ -1,5 +1,7 @@
 {
   "country": "Turks and Caicos Islands",
   "slug": "turks-and-caicos-islands",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "TC",
+  "iso3Code": "TCA"
 }

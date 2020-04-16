@@ -1,5 +1,7 @@
 {
   "country": "Cocos (Keeling) Islands",
   "slug": "cocos-keeling-islands",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "CC",
+  "iso3Code": "CCK"
 }

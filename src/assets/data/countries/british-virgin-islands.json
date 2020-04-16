@@ -1,5 +1,7 @@
 {
   "country": "British Virgin Islands",
   "slug": "british-virgin-islands",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "VG",
+  "iso3Code": "VGB"
 }

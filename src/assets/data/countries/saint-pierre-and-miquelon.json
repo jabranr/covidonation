@@ -1,5 +1,7 @@
 {
   "country": "Saint Pierre and Miquelon",
   "slug": "saint-pierre-and-miquelon",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "PM",
+  "iso3Code": "SPM"
 }

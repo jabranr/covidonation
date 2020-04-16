@@ -1,5 +1,7 @@
 {
   "country": "Saint Vincent and Grenadines",
   "slug": "saint-vincent-and-the-grenadines",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "VC",
+  "iso3Code": "VCT"
 }

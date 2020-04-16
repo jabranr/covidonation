@@ -1,5 +1,1 @@
-{
-  "country": "United States of America",
-  "slug": "united-states",
-  "orgs": []
-}
+{ "country": "United States of America", "slug": "united-states", "orgs": [], "iso2Code": "US", "iso3Code": "USA" }

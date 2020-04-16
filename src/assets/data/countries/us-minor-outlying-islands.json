@@ -1,5 +1,7 @@
 {
   "country": "US Minor Outlying Islands",
   "slug": "us-minor-outlying-islands",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "UM",
+  "iso3Code": "UMI"
 }

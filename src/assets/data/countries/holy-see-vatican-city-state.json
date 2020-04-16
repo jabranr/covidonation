@@ -1,5 +1,7 @@
 {
   "country": "Holy See (Vatican City State)",
   "slug": "holy-see-vatican-city-state",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "VA",
+  "iso3Code": "VAT"
 }

@@ -1,5 +1,7 @@
 {
   "country": "Northern Mariana Islands",
   "slug": "northern-mariana-islands",
-  "orgs": []
+  "orgs": [],
+  "iso2Code": "MP",
+  "iso3Code": "MNP"
 }

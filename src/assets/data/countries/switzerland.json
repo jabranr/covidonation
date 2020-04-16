@@ -1,5 +1,1 @@
-{
-  "country": "Switzerland",
-  "slug": "switzerland",
-  "orgs": []
-}
+{ "country": "Switzerland", "slug": "switzerland", "orgs": [], "iso2Code": "CH", "iso3Code": "CHE" }
