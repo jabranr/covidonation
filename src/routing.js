@@ -16,8 +16,9 @@ const Routing = () => {
         <CovidRoute
           path={`/${c.slug}`}
           slug={c.slug}
+          iso2={c.iso2}
           render={(props) => {
-            return <CountryPage slug={c.slug} {...props} />;
+            return <CountryPage slug={c.slug} iso2={c.iso2} {...props} />;
           }}
           key={c.slug}
         />
