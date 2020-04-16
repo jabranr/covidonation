@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[246],{343:function(n){n.exports=JSON.parse('{"country":"Wallis and Futuna Islands","slug":"wallis-and-futuna-islands","orgs":[]}')}}]);
-//# sourceMappingURL=246.f375c127.chunk.js.map

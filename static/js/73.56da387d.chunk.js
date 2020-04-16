@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[73],{170:function(a){a.exports=JSON.parse('{"country":"Falkland Islands (Malvinas)","slug":"falkland-islands-malvinas","orgs":[]}')}}]);
-//# sourceMappingURL=73.56da387d.chunk.js.map

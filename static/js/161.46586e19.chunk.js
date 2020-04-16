@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[161],{258:function(o){o.exports=JSON.parse('{"country":"New Caledonia","slug":"new-caledonia","orgs":[]}')}}]);
-//# sourceMappingURL=161.46586e19.chunk.js.map

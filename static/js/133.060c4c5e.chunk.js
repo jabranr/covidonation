@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[133],{230:function(o){o.exports=JSON.parse('{"country":"Macao, SAR China","slug":"macao-sar-china","orgs":[]}')}}]);
-//# sourceMappingURL=133.060c4c5e.chunk.js.map

@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[34],{131:function(i){i.exports=JSON.parse('{"country":"British Indian Ocean Territory","slug":"british-indian-ocean-territory","orgs":[]}')}}]);
-//# sourceMappingURL=34.c8702bfc.chunk.js.map

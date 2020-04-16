@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[224],{321:function(o){o.exports=JSON.parse('{"country":"Timor-Leste","slug":"timor-leste","orgs":[]}')}}]);
-//# sourceMappingURL=224.3559c935.chunk.js.map

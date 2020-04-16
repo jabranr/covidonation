@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[222],{319:function(n){n.exports=JSON.parse('{"country":"Tanzania, United Republic of","slug":"tanzania","orgs":[]}')}}]);
-//# sourceMappingURL=222.c73538f8.chunk.js.map

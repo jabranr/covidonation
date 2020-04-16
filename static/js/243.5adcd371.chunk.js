@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[243],{340:function(o){o.exports=JSON.parse('{"country":"Venezuela (Bolivarian Republic)","slug":"venezuela","orgs":[]}')}}]);
-//# sourceMappingURL=243.5adcd371.chunk.js.map

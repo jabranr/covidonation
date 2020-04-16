@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[141],{238:function(s){s.exports=JSON.parse('{"country":"Marshall Islands","slug":"marshall-islands","orgs":[]}')}}]);
-//# sourceMappingURL=141.f840315c.chunk.js.map

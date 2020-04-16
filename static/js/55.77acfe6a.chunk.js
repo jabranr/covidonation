@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[55],{152:function(o){o.exports=JSON.parse('{"country":"Cook Islands","slug":"cook-islands","orgs":[]}')}}]);
-//# sourceMappingURL=55.77acfe6a.chunk.js.map
