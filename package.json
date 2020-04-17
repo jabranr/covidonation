@@ -15,7 +15,8 @@
     "test:coverage": "npm test -- --coverage --watchAll=false --reporters=default --reporters=jest-junit",
     "format": "prettier --write \"src/**/*.{js,html,css,scss,json,svg}\"",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b gh-pages"
+    "deploy": "gh-pages -d build -b gh-pages",
+    "preview": "npm run build && serve -s build"
   },
   "keywords": [
     "coronavirus",
@@ -49,6 +50,7 @@
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
+    "serve": "^11.3.0",
     "typography": "^0.16.19"
   },
   "eslintConfig": {
