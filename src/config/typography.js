@@ -42,7 +42,7 @@ const typography = new Typography({
     },
     '.heading': {
       fontSize: '1rem',
-      color: '#888',
+      color: '#666',
       textTransform: 'uppercase',
       letterSpacing: '1px'
     }
