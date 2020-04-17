@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[80],{176:function(o){o.exports=JSON.parse('{"country":"French Polynesia","slug":"french-polynesia","orgs":[],"iso2Code":"PF","iso3Code":"PYF"}')}}]);
-//# sourceMappingURL=80.f2b843a7.chunk.js.map

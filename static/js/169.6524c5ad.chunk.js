@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[169],{266:function(o){o.exports=JSON.parse('{"country":"Northern Mariana Islands","slug":"northern-mariana-islands","orgs":[],"iso2Code":"MP","iso3Code":"MNP"}')}}]);
+//# sourceMappingURL=169.6524c5ad.chunk.js.map

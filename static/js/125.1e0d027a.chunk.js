@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[125],{221:function(o){o.exports=JSON.parse('{"country":"Lao PDR","slug":"lao-pdr","orgs":[],"iso2Code":"LA","iso3Code":"LAO"}')}}]);
-//# sourceMappingURL=125.1e0d027a.chunk.js.map

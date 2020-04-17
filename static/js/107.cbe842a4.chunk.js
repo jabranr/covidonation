@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[107],{204:function(o){o.exports=JSON.parse('{"country":"Iran, Islamic Republic of","slug":"iran","orgs":[],"iso2Code":"IR","iso3Code":"IRN"}')}}]);
+//# sourceMappingURL=107.cbe842a4.chunk.js.map

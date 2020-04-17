@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[168],{264:function(o){o.exports=JSON.parse('{"country":"Norfolk Island","slug":"norfolk-island","orgs":[],"iso2Code":"NF","iso3Code":"NFK"}')}}]);
-//# sourceMappingURL=168.aef16e8c.chunk.js.map

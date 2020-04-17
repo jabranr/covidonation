@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[244],{341:function(o){o.exports=JSON.parse('{"country":"Venezuela (Bolivarian Republic)","slug":"venezuela","orgs":[],"iso2Code":"VE","iso3Code":"VEN"}')}}]);
+//# sourceMappingURL=244.25cd23bd.chunk.js.map

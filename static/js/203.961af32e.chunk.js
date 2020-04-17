@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[203],{299:function(o){o.exports=JSON.parse('{"country":"Sierra Leone","slug":"sierra-leone","orgs":[],"iso2Code":"SL","iso3Code":"SLE"}')}}]);
-//# sourceMappingURL=203.961af32e.chunk.js.map
