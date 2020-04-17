@@ -24,18 +24,20 @@ const Layout = ({ title, description, canonical, children }) => {
       </Helmet>
       {!hasCookiesConsent && (
         <div className={style.cookie}>
-          This website uses cookies to deliver better user experience. By continuing to use this website you agree to
-          the use of cookies.
-          <Link
-            to="/"
+          <p className={style['cookie-text']}>
+            This website uses cookies to deliver better user experience. By continuing to use this website you agree to
+            the use of cookies.
+          </p>
+          <button
+            type="button"
+            className={style['cookie-cta']}
             onClick={(ev) => {
-              ev.preventDefault();
               cookie.set('cookie-consent', 'accepted');
               setCookieConsent(true);
             }}
           >
-            I understand
-          </Link>
+            Accept cookies
+          </button>
         </div>
       )}
       <header className={style.header}>
