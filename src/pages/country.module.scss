@@ -76,3 +76,14 @@
     text-decoration: none;
   }
 }
+
+.badge {
+  font-size: small;
+  background-color: #eee;
+  padding: 4px 8px 5px;
+  text-align: center;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0 0 0 5px;
+  letter-spacing: initial;
+}

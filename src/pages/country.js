@@ -75,7 +75,9 @@ const CountryPage = ({ slug }) => {
         <div className={style['content']}>
           {Boolean(waysToHelp.orgs.length) ? (
             <div>
-              <h2 className="heading">Ways to help</h2>
+              <h2 className="heading">
+                Ways to help <span className={style.badge}>{waysToHelp.orgs.length}</span>
+              </h2>
               {waysToHelp.orgs.map((org) => (
                 <Organisation key={org.name} org={org} />
               ))}
