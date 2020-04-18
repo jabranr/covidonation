@@ -15,7 +15,7 @@ import { isEmpty } from 'lodash-es';
 
 const { APP_HOSTNAME, APP_BASEPATH } = config();
 
-const TickIcon = ({ width = 16, height = 14, ...attrs }) => (
+export const TickIcon = ({ width = 16, height = 14, ...attrs }) => (
   <svg width={width} height={height} viewBox={`0 0 ${width * 2} ${height * 2}`} fill="currentColor" {...attrs}>
     <path d="M19.414 27.414l10-10a2 2 0 000-2.828l-10-10a2 2 0 00-2.828 2.828L23.172 14H4a2 2 0 000 4h19.172l-6.586 6.586c-.39.39-.586.902-.586 1.414s.195 1.024.586 1.414a2 2 0 002.828 0z" />
   </svg>
