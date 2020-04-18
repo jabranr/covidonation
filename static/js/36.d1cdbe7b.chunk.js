@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[36],{134:function(i){i.exports=JSON.parse('{"country":"British Virgin Islands","slug":"british-virgin-islands","orgs":[],"iso2Code":"VG","iso3Code":"VGB"}')}}]);
+//# sourceMappingURL=36.d1cdbe7b.chunk.js.map

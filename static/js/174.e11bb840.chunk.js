@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[174],{271:function(o){o.exports=JSON.parse('{"country":"Palestinian Territory","slug":"palestine","orgs":[],"iso2Code":"PS","iso3Code":"PSE"}')}}]);
-//# sourceMappingURL=174.e11bb840.chunk.js.map

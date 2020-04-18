@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[163],{260:function(o){o.exports=JSON.parse('{"country":"New Zealand","slug":"new-zealand","orgs":[],"iso2Code":"NZ","iso3Code":"NZL"}')}}]);
-//# sourceMappingURL=163.18e17ccb.chunk.js.map

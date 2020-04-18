@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[46],{143:function(o){o.exports=JSON.parse('{"country":"Central African Republic","slug":"central-african-republic","orgs":[],"iso2Code":"CF","iso3Code":"CAF"}')}}]);
-//# sourceMappingURL=46.fa0a562e.chunk.js.map

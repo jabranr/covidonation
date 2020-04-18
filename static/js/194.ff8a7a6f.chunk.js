@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[194],{291:function(o){o.exports=JSON.parse('{"country":"Saint Pierre and Miquelon","slug":"saint-pierre-and-miquelon","orgs":[],"iso2Code":"PM","iso3Code":"SPM"}')}}]);
-//# sourceMappingURL=194.ff8a7a6f.chunk.js.map

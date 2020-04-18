@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[148],{246:function(o){o.exports=JSON.parse('{"country":"Micronesia, Federated States of","slug":"micronesia","orgs":[],"iso2Code":"FM","iso3Code":"FSM"}')}}]);
+//# sourceMappingURL=148.dd0b253d.chunk.js.map

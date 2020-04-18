@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[211],{309:function(o){o.exports=JSON.parse('{"country":"South Sudan","slug":"south-sudan","orgs":[],"iso2Code":"SS","iso3Code":"SSD"}')}}]);
+//# sourceMappingURL=211.676de264.chunk.js.map

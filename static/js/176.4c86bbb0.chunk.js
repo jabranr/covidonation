@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[176],{273:function(o){o.exports=JSON.parse('{"country":"Papua New Guinea","slug":"papua-new-guinea","orgs":[],"iso2Code":"PG","iso3Code":"PNG"}')}}]);
-//# sourceMappingURL=176.4c86bbb0.chunk.js.map

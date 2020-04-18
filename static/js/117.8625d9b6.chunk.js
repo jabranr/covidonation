@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[117],{215:function(o){o.exports=JSON.parse('{"country":"Kazakhstan","slug":"kazakhstan","orgs":[],"iso2Code":"KZ","iso3Code":"KAZ"}')}}]);
+//# sourceMappingURL=117.8625d9b6.chunk.js.map

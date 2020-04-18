@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[35],{132:function(o){o.exports=JSON.parse('{"country":"British Indian Ocean Territory","slug":"british-indian-ocean-territory","orgs":[],"iso2Code":"IO","iso3Code":"IOT"}')}}]);
-//# sourceMappingURL=35.3c816121.chunk.js.map

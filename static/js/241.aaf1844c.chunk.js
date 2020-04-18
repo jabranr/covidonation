@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[241],{338:function(o){o.exports=JSON.parse('{"country":"US Minor Outlying Islands","slug":"us-minor-outlying-islands","orgs":[],"iso2Code":"UM","iso3Code":"UMI"}')}}]);
-//# sourceMappingURL=241.aaf1844c.chunk.js.map

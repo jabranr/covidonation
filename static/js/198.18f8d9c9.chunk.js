@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[198],{295:function(o){o.exports=JSON.parse('{"country":"Sao Tome and Principe","slug":"sao-tome-and-principe","orgs":[],"iso2Code":"ST","iso3Code":"STP"}')}}]);
-//# sourceMappingURL=198.18f8d9c9.chunk.js.map

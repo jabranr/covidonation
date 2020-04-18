@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[246],{343:function(o){o.exports=JSON.parse('{"country":"Virgin Islands, US","slug":"virgin-islands","orgs":[],"iso2Code":"VI","iso3Code":"VIR"}')}}]);
-//# sourceMappingURL=246.b28a9a99.chunk.js.map
