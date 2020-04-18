@@ -16,7 +16,7 @@ List of resources, donations, charities and information on ways to help in Coron
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/446db57e-b7d0-47bf-bdeb-b907aa1f17c5/deploy-status)](https://app.netlify.com/sites/covidonation/deploys)
 
-https://staging-covidonation.netlify.com
+https://staging-covidonation.netlify.app
 
 ## How to contribute
 
