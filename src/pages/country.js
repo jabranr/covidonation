@@ -54,7 +54,7 @@ const CountryPage = ({ slug }) => {
     <Layout
       title={`${waysToHelp.country} - Ways to help in Coronavirus (COVID-19) panedmic`}
       description={`Details about different organisations, charities, individuals in ${waysToHelp.country} who are trying to help the
-          vulnerables during the panedmic of Coronavirus (COVID-19).`}
+          vulnerable during the panedmic of Coronavirus (COVID-19).`}
       canonical={`${APP_HOSTNAME}${APP_BASEPATH}${location.pathname}`}
     >
       <div className="container">
@@ -86,7 +86,7 @@ const CountryPage = ({ slug }) => {
             <div>
               <h4>There is no data available for {waysToHelp.country} 😞</h4>
               <p>
-                But good news is that you can{' '}
+                But the good news is that you can{' '}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -94,7 +94,7 @@ const CountryPage = ({ slug }) => {
                 >
                   edit this file
                 </a>{' '}
-                to update data that will help the humanity. 😀
+                to update data that will help humanity. 😀
               </p>
               <p>
                 Here is some guidance on{' '}
