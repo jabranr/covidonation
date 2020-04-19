@@ -67,7 +67,7 @@ If you would like to report an issue or request a new feature then you can [crea
 | :------------------------------------ | :------------- | :------------ |
 | Name of the Organization (R)          | `name`         | String        |
 | Description of the Organization (R)   | `description`  | String        |
-| Contacts (R)                          | `contacts`     | Array(String) |
+| Contacts (O)                          | `contacts`     | Array(String) |
 | Donation Link / Phone number (R)      | `donation`     | String        |
 | Social Links (O)                      | `social`       | Array(Object) |
 | Need help with (R)                    | `needHelpWith` | Array(String) |
