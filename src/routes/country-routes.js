@@ -1,11 +1,12 @@
-/* Automatically generated file. DO NOT edit manually. */
+/* Automatically generated file. DO NOT edit manually. See setup.js for details. */
 import React from 'react';
+import { Switch } from 'react-router-dom';
 
 import CountryPage from '../pages/country';
 import CovidRoute from './covid-route';
 
 const CountryRoutes = () => (
-  <>
+  <Switch>
     <CovidRoute exact path="/afghanistan" slug="afghanistan" render={(props) => <CountryPage slug="afghanistan" {...props} />} />
 <CovidRoute exact path="/ala-aland-islands" slug="ala-aland-islands" render={(props) => <CountryPage slug="ala-aland-islands" {...props} />} />
 <CovidRoute exact path="/albania" slug="albania" render={(props) => <CountryPage slug="albania" {...props} />} />
@@ -254,7 +255,7 @@ const CountryRoutes = () => (
 <CovidRoute exact path="/yemen" slug="yemen" render={(props) => <CountryPage slug="yemen" {...props} />} />
 <CovidRoute exact path="/zambia" slug="zambia" render={(props) => <CountryPage slug="zambia" {...props} />} />
 <CovidRoute exact path="/zimbabwe" slug="zimbabwe" render={(props) => <CountryPage slug="zimbabwe" {...props} />} />
-  </>
+  </Switch>
 );
 
 export default CountryRoutes;
