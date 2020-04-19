@@ -27,7 +27,7 @@ countryList.forEach((c) => {
   });
 
   countryRoutes.push(
-    `<CovidRoute exact path="/${content.slug}" slug="${content.slug}" render={(props) => <CountryPage slug="${content.slug}" {...props} />} />`
+    `<RouteWithSummary exact path="/${content.slug}" slug="${content.slug}" render={(props) => <CountryPage slug="${content.slug}" {...props} />} />`
   );
 });
 
@@ -46,7 +46,7 @@ import React from 'react';
 import { Switch } from 'react-router-dom';
 
 import CountryPage from '../pages/country';
-import CovidRoute from './covid-route';
+import RouteWithSummary from './route-with-summary';
 
 const CountryRoutes = () => (
   <Switch>
