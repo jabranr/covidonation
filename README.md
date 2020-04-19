@@ -26,15 +26,15 @@ All pull requests must pass the tests. A preview is automatically generated for 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/446db57e-b7d0-47bf-bdeb-b907aa1f17c5/deploy-status)](https://app.netlify.com/sites/covidonation/deploys)
 
-Nightly builds are available at following URL:
+Nightly builds are available at the following URL:
 
 https://staging-covidonation.netlify.com
 
-See details of our [next milestone](https://github.com/jabranr/covidonation/milestones) to contribute into the on-going development.
+See details of our [next milestone](https://github.com/jabranr/covidonation/milestones) to contribute to the on-going development.
 
 ## Releases
 
-`master` is the production branch. Production releases are batched and based on milestones. See details of our [next milestone](https://github.com/jabranr/covidonation/milestones) to contribute into the next release.
+`master` is the production branch. Production releases are batched and based on milestones. See details of our [next milestone](https://github.com/jabranr/covidonation/milestones) to contribute to the next release.
 
 ## How to contribute
 
@@ -42,7 +42,7 @@ We would love you to contribute! See our [latest development](https://github.com
 
 > Beware it is best to discuss before you start to work on a major change or new big feature.
 
-If you would like to report an issue or request new feature then you can [create an issue](https://github.com/jabranr/covidonation/issues).
+If you would like to report an issue or request a new feature then you can [create an issue](https://github.com/jabranr/covidonation/issues).
 
 ### Country data contribution
 
@@ -86,7 +86,7 @@ Example Reference File: [`pakistan.json`](https://github.com/jabranr/covidonatio
 
 ## License
 
-The source code is licensed under the MIT License unless stated otherwise. The data is attributed for their relevant sources.
+The source code is licensed under the MIT License unless stated otherwise. The data is attributed to their relevant sources.
 
 ---
 
