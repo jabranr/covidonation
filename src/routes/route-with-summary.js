@@ -9,7 +9,7 @@ import { pushDataLayer } from '../util';
 
 const { IS_PRODUCTION } = config();
 
-const CovidRoute = (props) => {
+const RouteWithSummary = (props) => {
   const [summary, setSummary] = useSummary();
 
   useEffect(() => {
@@ -41,4 +41,4 @@ const CovidRoute = (props) => {
   return <Route {...props} />;
 };
 
-export default CovidRoute;
+export default RouteWithSummary;

@@ -27,7 +27,7 @@ countryList.forEach((c) => {
   });
 
   countryRoutes.push(
-    `<CovidRoute exact path="/${content.slug}" slug="${content.slug}" render={(props) => <CountryPage slug="${content.slug}" {...props} />} />`
+    `<RouteWithSummary exact path="/${content.slug}" slug="${content.slug}" render={(props) => <CountryPage slug="${content.slug}" {...props} />} />`
   );
 });
 
@@ -41,16 +41,17 @@ export default ${JSON.stringify(countryData)};`
 // write file with routes based on slugs for all countries
 fs.writeFileSync(
   path.resolve(__dirname, './src/routes/country-routes.js'),
-  `/* Automatically generated file. DO NOT edit manually. */
+  `/* Automatically generated file. DO NOT edit manually. See setup.js for details. */
 import React from 'react';
+import { Switch } from 'react-router-dom';
 
 import CountryPage from '../pages/country';
-import CovidRoute from './covid-route';
+import RouteWithSummary from './route-with-summary';
 
 const CountryRoutes = () => (
-  <>
+  <Switch>
     ${countryRoutes.join('\n')}
-  </>
+  </Switch>
 );
 
 export default CountryRoutes;`
