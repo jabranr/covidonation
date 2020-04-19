@@ -42,9 +42,7 @@ const HomePage = () => {
       }
 
       try {
-        await axios.post(formRef.current.getAttribute('action'), signupForm.data, {
-          withCredentials: true
-        });
+        await axios.post(formRef.current.getAttribute('action'), signupForm.data);
 
         dispatchSignupForm({
           success: 'You have subscribed successfully',
