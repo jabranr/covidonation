@@ -27,4 +27,4 @@ deploy:
   email: hello@jabran.me
   github_token: $GITHUB_TOKEN
   on:
-    branch: master
+    branch: develop

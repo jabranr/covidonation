@@ -12,9 +12,15 @@ List of resources, donations, charities and information on ways to help in Coron
 - Run project unit tests `npm test`
 - Build project for production `npm run build`
 
+> Always branch out from `master` unless working on a milestone then branch out from `develop` or see details in the milestone.
+
 ## Staging
 
+Staging is based on `develop` which is a CD and CI branch.
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/446db57e-b7d0-47bf-bdeb-b907aa1f17c5/deploy-status)](https://app.netlify.com/sites/covidonation/deploys)
+
+Nightly builds are available at following URL:
 
 https://staging-covidonation.netlify.com
 
