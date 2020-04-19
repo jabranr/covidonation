@@ -4,6 +4,7 @@
   "description": "List of resources, donations, charities and information on ways to help in Coronavirus (COVID-19) pandemic.",
   "main": "src/index.js",
   "private": true,
+  "homepage": ".",
   "scripts": {
     "setup": "node setup.js",
     "prestart": "npm run setup",
