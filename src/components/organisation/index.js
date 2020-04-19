@@ -161,7 +161,10 @@ const Organisation = ({ org }) => {
       <p
         className={style.description}
         dangerouslySetInnerHTML={{
-          __html: isDetailedView ? org.description : `${org.description.substring(0, 150)}...`
+          __html:
+            isDetailedView || org.description.length <= 150
+              ? org.description
+              : `${org.description.substring(0, 150)}...`
         }}
       />
 
@@ -233,8 +236,9 @@ const Organisation = ({ org }) => {
                 type="button"
                 onClick={() => {
                   setDetailedView((currValue) => {
+                    const hasContacts = Boolean(org.contacts && org.contacts.length);
                     if (currValue) {
-                      contactRef.current.style.setProperty('--contacts-height', `0px`);
+                      hasContacts && contactRef.current.style.setProperty('--contacts-height', `0px`);
                     } else {
                       pushDataLayer({
                         event: 'gaEvent',
@@ -242,7 +246,11 @@ const Organisation = ({ org }) => {
                         gaAction: org.name
                       });
 
-                      contactRef.current.style.setProperty('--contacts-height', `${contactRef.current.scrollHeight}px`);
+                      hasContacts &&
+                        contactRef.current.style.setProperty(
+                          '--contacts-height',
+                          `${contactRef.current.scrollHeight}px`
+                        );
 
                       // wait for animation to finish before scrolling
                       setTimeout(() => {

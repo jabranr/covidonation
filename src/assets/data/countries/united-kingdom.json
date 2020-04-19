@@ -3,7 +3,23 @@
   "slug": "united-kingdom",
   "helplines": ["https://www.nhs.uk/coronavirus", "111"],
   "links": ["https://www.gov.uk/coronavirus"],
-  "orgs": [],
+  "orgs": [
+    {
+      "name": "Unicef",
+      "description": "Unicef has been working closely with governments and the World Health Organization (WHO) since the start of the coronavirus outbreak. Your donation will help to limit the spread of the virus and reduce the impact on children and families.",
+      "donation": "https://www.unicef.org.uk/donate/coronavirus/",
+      "social": [
+        {
+          "website": "https://www.unicef.org.uk",
+          "twitter": "http://www.twitter.com/unicef_uk",
+          "facebook": "http://www.facebook.com/unicef.uk"
+        }
+      ],
+      "areasCovered": ["UK"],
+      "helpingWith": ["surgical gloves", "soap", "clean water", "masks", "coveralls"],
+      "needHelpWith": ["Money"]
+    }
+  ],
   "iso2Code": "GB",
   "iso3Code": "GBR"
 }
