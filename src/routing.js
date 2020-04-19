@@ -5,12 +5,12 @@ import './config/typography';
 import HomePage from './pages';
 import CountryRoutes from './routes/country-routes';
 import NotFound from './pages/not-found';
-import CovidRoute from './routes/covid-route';
+import RouteWithSummary from './routes/route-with-summary';
 
 const Routing = () => {
   return (
     <Switch>
-      <CovidRoute exact path="/" component={HomePage} />
+      <RouteWithSummary exact path="/" component={HomePage} />
       <CountryRoutes />
       <Route exact path="*" component={NotFound} />
     </Switch>
