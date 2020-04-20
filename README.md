@@ -24,7 +24,7 @@ Staging is based on `develop` which is a CD and CI branch.
 
 All pull requests must pass the tests. A preview is automatically generated for each pull request. Pull requests are merged into the CI/CD branch when reviewed and approved.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/446db57e-b7d0-47bf-bdeb-b907aa1f17c5/deploy-status)](https://app.netlify.com/sites/covidonation/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/446db57e-b7d0-47bf-bdeb-b907aa1f17c5/deploy-status)](https://app.netlify.com/sites/staging-covidonation/deploys)
 
 Nightly builds are available at the following URL:
 
