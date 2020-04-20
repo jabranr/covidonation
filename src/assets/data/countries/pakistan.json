@@ -5,6 +5,20 @@
   "links": ["https://www.nih.org.pk", "http://www.covidwatch.pk", "https://covidreliefpakistan.com"],
   "orgs": [
     {
+      "name": "PM's Covid Relief Fund",
+      "description": "Families that can't make their ends meet are in dire need of support. Smallest donation you make will help a family support themselves for a month and get themselves back on their feet.",
+      "contacts": ["6677", "+92519205704", "ds.complaint@ophrd.gov.pk"],
+      "donation": "https://covid.ophrd.gov.pk/",
+      "social": [
+        {
+          "website": "https://covid.ophrd.gov.pk/"
+        }
+      ],
+      "needHelpWith": ["money", "volunteers"],
+      "helpingWith": ["rations", "food", "social care", "medical care"],
+      "areasCovered": ["Pakistan"]
+    },
+    {
       "name": "Robin Hood Army / Orange Tree Foundation",
       "description": "<p>They are helping DAILY WAGE WORKERS and their families with RATION in Karachi.</p><p>You may donate a ration pack or inform us about a deserving family by sending us a WhatsApp message on 03000 225519 -18 or email on Pakistan@robinhoodarmy.com or info@orangetreefoundation.org</p><p>For more information call at 021-38693111</p><ul><li>Orange Tree Foundation is collecting monetary donations for this campaign.</li><li>Robin Hood Army are only verifying and distribution the ration packs to the needy.</li></ul>",
       "contacts": [
