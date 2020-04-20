@@ -52,7 +52,7 @@ const CountryPage = ({ slug }) => {
 
   return (
     <Layout
-      title={`${waysToHelp.country} - Ways to help in Coronavirus (COVID-19) panedmic`}
+      title={`Ways to help in ${waysToHelp.country} during Coronavirus (COVID-19) panedmic`}
       description={`Details about different organisations, charities, individuals in ${waysToHelp.country} who are trying to help the
           vulnerable during the panedmic of Coronavirus (COVID-19).`}
       canonical={`${APP_HOSTNAME}${APP_BASEPATH}${location.pathname}`}
