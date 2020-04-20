@@ -1,6 +1,6 @@
 import React, { memo, useState, useRef } from 'react';
 
-import FormattedString from '../formatted-string';
+import FormatUrlOrPhone from '../format-url-or-phone';
 
 import style from './style.module.scss';
 import { pushDataLayer } from '../../util';
@@ -138,7 +138,7 @@ const Organisation = ({ org }) => {
             ))}
           </div>
         )}
-        <FormattedString
+        <FormatUrlOrPhone
           href={org.donation}
           className={style['donation-cta']}
           onClick={() => {
@@ -155,7 +155,7 @@ const Organisation = ({ org }) => {
             <WebIcon className={style['cta-icon']} />
           )}{' '}
           Make a donation
-        </FormattedString>
+        </FormatUrlOrPhone>
       </div>
 
       <p
@@ -174,7 +174,7 @@ const Organisation = ({ org }) => {
           <ul>
             {org.contacts.map((contact) => (
               <li key={contact}>
-                <FormattedString href={contact}>{contact}</FormattedString>
+                <FormatUrlOrPhone href={contact}>{contact}</FormatUrlOrPhone>
               </li>
             ))}
           </ul>
@@ -186,7 +186,7 @@ const Organisation = ({ org }) => {
           return (
             <div key={website || twitter || facebook} className={style.social}>
               {Boolean(website) && (
-                <FormattedString
+                <FormatUrlOrPhone
                   href={website}
                   className={style.website}
                   onClick={() => {
@@ -199,10 +199,10 @@ const Organisation = ({ org }) => {
                   }}
                 >
                   Visit website
-                </FormattedString>
+                </FormatUrlOrPhone>
               )}
               {Boolean(facebook) && (
-                <FormattedString
+                <FormatUrlOrPhone
                   href={facebook}
                   onClick={() => {
                     pushDataLayer({
@@ -214,10 +214,10 @@ const Organisation = ({ org }) => {
                   }}
                 >
                   <FacebookIcon size={20} viewBox="0 0 32 32" className={style.facebook} />
-                </FormattedString>
+                </FormatUrlOrPhone>
               )}
               {Boolean(twitter) && (
-                <FormattedString
+                <FormatUrlOrPhone
                   href={twitter}
                   onClick={() => {
                     pushDataLayer({
@@ -229,7 +229,7 @@ const Organisation = ({ org }) => {
                   }}
                 >
                   <TwitterIcon size={20} viewBox="0 0 32 32" className={style.twitter} />
-                </FormattedString>
+                </FormatUrlOrPhone>
               )}
               <button
                 className={style['more-details']}
