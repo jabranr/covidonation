@@ -5,7 +5,7 @@ import { find } from 'lodash-es';
 import Layout from '../components/layout';
 import Covid19Cases from '../components/covid19cases';
 import Organisation from '../components/organisation';
-import FormatUrlOrPhone from '../components/format-url-or-phone';
+import FormattedString from '../components/formatted-string';
 import useSummary from '../store/summary-hook';
 import config from '../config';
 import { pushDataLayer } from '../util';
@@ -64,7 +64,7 @@ const CountryPage = ({ slug }) => {
             {waysToHelp.helplines &&
               waysToHelp.helplines.map((helplineData) => (
                 <div key={helplineData}>
-                  <FormatUrlOrPhone href={helplineData}>{helplineData}</FormatUrlOrPhone>
+                  <FormattedString href={helplineData}>{helplineData}</FormattedString>
                 </div>
               ))}
           </div>
@@ -115,9 +115,9 @@ const CountryPage = ({ slug }) => {
               {waysToHelp.links.map((link) => (
                 <div key={link} className={style.link}>
                   <TickIcon className={style['tick-icon']} />
-                  <FormatUrlOrPhone key={link} href={link}>
+                  <FormattedString key={link} href={link}>
                     {link}
-                  </FormatUrlOrPhone>
+                  </FormattedString>
                 </div>
               ))}
             </div>
