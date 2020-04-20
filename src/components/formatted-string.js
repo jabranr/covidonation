@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-const FormatUrlOrPhone = ({ href, children, ...attr }) => {
+const FormattedString = ({ href, children, ...attr }) => {
   attr.target = attr.target || '_blank';
 
   if (attr.target === '_blank') {
@@ -24,6 +24,14 @@ const FormatUrlOrPhone = ({ href, children, ...attr }) => {
     );
   }
 
+  if (/@/gi.test(href)) {
+    return (
+      <a href={`mailto:${href}`} className={attr.className}>
+        {children}
+      </a>
+    );
+  }
+
   if (/[0-9-+ ]/.test(href)) {
     return (
       <a href={`tel:${href}`} className={attr.className}>
@@ -35,4 +43,4 @@ const FormatUrlOrPhone = ({ href, children, ...attr }) => {
   return <a href={href}>{children}</a>;
 };
 
-export default memo(FormatUrlOrPhone);
+export default memo(FormattedString);
