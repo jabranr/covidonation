@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import dayjs from 'dayjs';
 import classNames from 'classnames';
 
-import FormatUrlOrPhone from '../format-url-or-phone';
+import FormattedString from '../formatted-string';
 
 import style from './style.module.scss';
 
@@ -31,7 +31,7 @@ const Covid19Cases = ({ summary, lastUpdated }) => {
         {lastUpdated && (
           <li>
             {dayjs(lastUpdated).format('[Updated on] DD MMM YYYY [at] hh:mm:ssA')}{' '}
-            <FormatUrlOrPhone href="https://everytimezone.com">UTC</FormatUrlOrPhone>
+            <FormattedString href="https://everytimezone.com">UTC</FormattedString>
           </li>
         )}
         <li>
