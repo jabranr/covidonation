@@ -14,6 +14,7 @@ const flags = path.resolve(__dirname, './public/assets/flags');
 const countryList = fs.readdirSync(countries);
 const countryData = [];
 const countryRoutes = [];
+const sitemap = ['https://covidonation.com'];
 
 countryList.forEach((c) => {
   const content = JSON.parse(fs.readFileSync(`${countries}/${c}`));
@@ -29,6 +30,8 @@ countryList.forEach((c) => {
   countryRoutes.push(
     `<RouteWithSummary exact path="/${content.slug}" slug="${content.slug}" render={(props) => <CountryPage slug="${content.slug}" {...props} />} />`
   );
+
+  sitemap.push(`https://covidonation.com/${content.slug}`);
 });
 
 // write file with slugs for all countries
@@ -56,3 +59,6 @@ const CountryRoutes = () => (
 
 export default CountryRoutes;`
 );
+
+// generate sitemap
+fs.writeFileSync(path.resolve(__dirname, './public/sitemap.txt'), sitemap.join('\n'));
