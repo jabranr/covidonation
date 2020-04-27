@@ -16,6 +16,7 @@ const SearchIcon = ({ width = 18, height = 18, ...attrs }) => (
 );
 
 const HomePage = () => {
+  const searchRef = useRef();
   const imagesRef = useRef([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
 
@@ -49,8 +50,9 @@ const HomePage = () => {
         <div className={style['country-search']}>
           <div className={style.search}>
             <input
-              placeholder="Type a country name"
+              ref={searchRef}
               type="text"
+              placeholder="Type a country name"
               className={style['search-input']}
               onChange={(ev) => {
                 if (ev.target.value.length < 3) {
@@ -70,7 +72,10 @@ const HomePage = () => {
                 {filteredCountries.map((c, i) => (
                   <li className={classNames(style['result-item'], { [style['even-item']]: i % 2 !== 0 })} key={c.slug}>
                     <TickIcon />
-                    <Link className={style['result-link']} to={`/${c.slug}`}>
+                    <Link
+                      className={style['result-link']}
+                      to={`/${c.slug}?utm_source=search&utm_keyword=${searchRef.current.value}`}
+                    >
                       {c.name}
                     </Link>
                   </li>

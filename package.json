@@ -2,7 +2,9 @@
   "name": "covidonation",
   "version": "1.0.0",
   "description": "List of resources, donations, charities and information on ways to help in Coronavirus (COVID-19) pandemic.",
-  "main": "index.js",
+  "main": "src/index.js",
+  "private": true,
+  "homepage": ".",
   "scripts": {
     "setup": "node setup.js",
     "prestart": "npm run setup",
@@ -14,20 +16,27 @@
     "test:watch": "npm test -- -u --watch",
     "test:coverage": "npm test -- --coverage --watchAll=false --reporters=default --reporters=jest-junit",
     "format": "prettier --write \"src/**/*.{js,html,css,scss,json,svg}\"",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b gh-pages",
     "preview": "npm run build && serve -s build"
   },
   "keywords": [
     "coronavirus",
     "covid-19",
     "covid19",
-    "resources"
+    "resources",
+    "donation",
+    "charities",
+    "sars-cov-2"
   ],
   "author": {
     "name": "Jabran Rafique",
     "email": "hello@jabran.me"
   },
+  "contributors": [
+    {
+      "name": "Arslan Mushtaq",
+      "email": "m.arslanmushtaqahmed@gmail.com"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "@jabranr-lab/prettier": "^1.1.0",
@@ -41,7 +50,6 @@
     "jest-junit": "^10.0.0",
     "js-cookie": "^2.2.1",
     "lazysizes": "^5.2.0",
-    "lodash": "^4.17.15",
     "lodash-es": "^4.17.15",
     "node-sass": "^4.13.1",
     "pretty-quick": "^2.0.1",

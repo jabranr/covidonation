@@ -5,7 +5,7 @@ import { find } from 'lodash-es';
 import Layout from '../components/layout';
 import Covid19Cases from '../components/covid19cases';
 import Organisation from '../components/organisation';
-import FormatUrlOrPhone from '../components/format-url-or-phone';
+import FormattedString from '../components/formatted-string';
 import useSummary from '../store/summary-hook';
 import config from '../config';
 import { pushDataLayer } from '../util';
@@ -52,9 +52,9 @@ const CountryPage = ({ slug }) => {
 
   return (
     <Layout
-      title={`${waysToHelp.country} - Ways to help in Coronavirus (COVID-19) panedmic`}
+      title={`Ways to help in ${waysToHelp.country} during Coronavirus (COVID-19) panedmic`}
       description={`Details about different organisations, charities, individuals in ${waysToHelp.country} who are trying to help the
-          vulnerables during the panedmic of Coronavirus (COVID-19).`}
+          vulnerable during the panedmic of Coronavirus (COVID-19).`}
       canonical={`${APP_HOSTNAME}${APP_BASEPATH}${location.pathname}`}
     >
       <div className="container">
@@ -64,7 +64,7 @@ const CountryPage = ({ slug }) => {
             {waysToHelp.helplines &&
               waysToHelp.helplines.map((helplineData) => (
                 <div key={helplineData}>
-                  <FormatUrlOrPhone href={helplineData}>{helplineData}</FormatUrlOrPhone>
+                  <FormattedString href={helplineData}>{helplineData}</FormattedString>
                 </div>
               ))}
           </div>
@@ -86,7 +86,7 @@ const CountryPage = ({ slug }) => {
             <div>
               <h4>There is no data available for {waysToHelp.country} 😞</h4>
               <p>
-                But good news is that you can{' '}
+                But the good news is that you can{' '}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -94,7 +94,7 @@ const CountryPage = ({ slug }) => {
                 >
                   edit this file
                 </a>{' '}
-                to update data that will help the humanity. 😀
+                to update data that will help humanity. 😀
               </p>
               <p>
                 Here is some guidance on{' '}
@@ -115,9 +115,9 @@ const CountryPage = ({ slug }) => {
               {waysToHelp.links.map((link) => (
                 <div key={link} className={style.link}>
                   <TickIcon className={style['tick-icon']} />
-                  <FormatUrlOrPhone key={link} href={link}>
+                  <FormattedString key={link} href={link}>
                     {link}
-                  </FormatUrlOrPhone>
+                  </FormattedString>
                 </div>
               ))}
             </div>

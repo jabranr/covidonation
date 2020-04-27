@@ -6,14 +6,17 @@
 }
 
 .cookie {
-  position: sticky;
   grid-gap: 1rem;
   place-items: center start;
-  top: 0;
   padding: 1rem;
   background-color: #ffffaa;
   text-align: left;
-  z-index: 1;
+
+  @media (min-width: 600px) {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
 }
 
 .cookie-text {
@@ -56,22 +59,27 @@
   align-self: center;
   grid-template-columns: auto 2fr;
   padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1;
   background-color: #fff;
   box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.1);
-}
-
-.cookie + .header {
-  top: 149px;
 
   @media (min-width: 600px) {
-    top: 125px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
+}
 
-  @media (min-width: 1000px) {
-    top: 101px;
+@media (min-width: 600px) {
+  .cookie + .header {
+    top: 149px;
+
+    @media (min-width: 600px) {
+      top: 125px;
+    }
+
+    @media (min-width: 1000px) {
+      top: 101px;
+    }
   }
 }
 
