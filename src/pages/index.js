@@ -35,8 +35,8 @@ const HomePage = () => {
     <Layout>
       <div className="container">
         <p className={style.intro}>
-          Here you can find details about different organisations, charities, individuals who are trying to help the
-          vulnerables during the panedmic of Coronavirus (COVID-19).
+          Find details about different organisations, charities and individuals who are working around the world to help
+          the vulnerable during the pandemic of Coronavirus (COVID-19).
         </p>
 
         <h2 className="heading">Countries</h2>
