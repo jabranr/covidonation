@@ -19,24 +19,18 @@
       "areasCovered": ["Pakistan"]
     },
     {
-      "name": "Robin Hood Army / Orange Tree Foundation",
-      "description": "<p>They are helping DAILY WAGE WORKERS and their families with RATION in Karachi.</p><p>You may donate a ration pack or inform us about a deserving family by sending us a WhatsApp message on 03000 225519 -18 or email on Pakistan@robinhoodarmy.com or info@orangetreefoundation.org</p><p>For more information call at 021-38693111</p><ul><li>Orange Tree Foundation is collecting monetary donations for this campaign.</li><li>Robin Hood Army are only verifying and distribution the ration packs to the needy.</li></ul>",
-      "contacts": [
-        "+923000225518",
-        "+923000225519",
-        "+922138693111",
-        "Pakistan@robinhoodarmy.com",
-        "info@orangetreefoundation.org"
-      ],
-      "donation": "+923000225518",
+      "name": "Orange Tree Foundation",
+      "description": "Orange Tree Foundation is collecting monetary donations for helping daily wage workers and their families with rations in Karachi. You can donate a ration pack or inform them about a deserving family by contacting them.",
+      "contacts": ["+923000225518", "+923000225519", "+922138693111", "info@orangetreefoundation.org"],
+      "donation": "+923000225530",
       "social": [
         {
           "website": "http://orangetreefoundation.org"
         }
       ],
-      "needHelpWith": ["Money"],
-      "helpingWith": ["Rations", "PPE"],
-      "areasCovered": ["Sindh"]
+      "needHelpWith": ["money"],
+      "helpingWith": ["rations", "PPE"],
+      "areasCovered": ["Karachi", "Sindh"]
     },
     {
       "name": "Coronavirus Control Campaign",
@@ -56,12 +50,11 @@
     {
       "name": "JDC Foundation Pakistan",
       "description": "They will help Sindh govt with providing food to isolated patients. They also have relief setups in Sindh where they offer free food to people. They are doubling their efforts nowadays.",
-      "donation": "https://www.facebook.com/JDC.organization/",
+      "donation": "https://www.facebook.com/jdcfoundationpk/",
       "contacts": ["02136341059", "03330404043"],
       "social": [
         {
-          "website": "https://www.facebook.com/JDC.organization/",
-          "facebook": "https://www.facebook.com/JDC.organization/"
+          "facebook": "https://www.facebook.com/jdcfoundationpk/"
         }
       ],
       "areasCovered": ["Sindh"],
@@ -174,6 +167,22 @@
       "areasCovered": ["Sialkot"],
       "helpingWith": ["rations", "food", "PPE,"],
       "needHelpWith": ["money", "volunteers"]
+    },
+    {
+      "name": "Robin Hood Army",
+      "description": "Robin Hood Army are verifying and distribution the ration packs to the needy.",
+      "contacts": ["Pakistan@robinhoodarmy.com"],
+      "donation": "https://robinhoodarmy.com/",
+      "social": [
+        {
+          "website": "https://robinhoodarmy.com/",
+          "facebook": "https://www.facebook.com/robinhoodarmy",
+          "twitter": "https://twitter.com/rha_india"
+        }
+      ],
+      "needHelpWith": ["money", "volunteers", "food", "ration"],
+      "helpingWith": ["rations", "PPE"],
+      "areasCovered": ["Karachi", "Islamabad", "Lahore", "Sukkur"]
     }
   ],
   "iso2Code": "PK",
