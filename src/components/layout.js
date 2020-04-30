@@ -54,6 +54,11 @@ const Layout = ({ title, description, canonical, children }) => {
             <div className={style.tagline}>Ways to help</div>
           </div>
         )}
+        <nav className={style.nav}>
+          <Link to="/add-data" className={style['nav-btn']}>
+            Add data
+          </Link>
+        </nav>
       </header>
       <main className={style.main}>{children}</main>
       <footer className={style.footer}>
