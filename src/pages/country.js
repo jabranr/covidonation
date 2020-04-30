@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { find } from 'lodash-es';
+import { find, isEmpty } from 'lodash-es';
 
 import Layout from '../components/layout';
 import Covid19Cases from '../components/covid19cases';
@@ -11,7 +11,6 @@ import config from '../config';
 import { pushDataLayer } from '../util';
 
 import style from './country.module.scss';
-import { isEmpty } from 'lodash-es';
 
 const { APP_HOSTNAME, APP_BASEPATH } = config();
 
