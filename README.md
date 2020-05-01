@@ -16,7 +16,7 @@ List of resources, donations, charities and information on ways to help in Coron
 - Build project for production
   - `npm run build`
 
-> Always branch out from `master` for your work unless working on a milestone then branch out from `develop` or see milestone details.
+> Always branch out from `develop` or see milestone details.
 
 ## Staging
 
