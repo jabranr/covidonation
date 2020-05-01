@@ -4,7 +4,6 @@ import classNames from 'classnames';
 
 import Layout from '../components/layout';
 import config from '../config';
-import { pushDataLayer } from '../util';
 
 import style from './add-data.module.scss';
 
