@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { find, isEmpty } from 'lodash-es';
 
 import Layout from '../components/layout';
@@ -83,28 +83,22 @@ const CountryPage = ({ slug }) => {
             </div>
           ) : (
             <div>
-              <h4>There is no data available for {waysToHelp.country} 😞</h4>
-              <p>
-                But the good news is that you can{' '}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={`https://github.com/jabranr/covidonation/blob/master/src/assets/data/countries/${waysToHelp.slug}.json`}
-                >
-                  edit this file
-                </a>{' '}
-                to update data that will help humanity. 😀
+              <h4 className="lead">
+                There is no data available for <i>{waysToHelp.country}</i> 😞
+              </h4>
+              <p className="lead">
+                <Link to="/add-data">You can add</Link> an organisation, charity, individual or community group to
+                update data for <strong>{waysToHelp.country}</strong> that will help humanity.
               </p>
               <p>
-                Here is some guidance on{' '}
+                &raquo;{' '}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://github.com/jabranr/covidonation#how-to-contribute"
                 >
-                  contributing
-                </a>{' '}
-                the data for a country.
+                  Guidance on contributing dataset for a country
+                </a>
               </p>
             </div>
           )}
@@ -120,16 +114,6 @@ const CountryPage = ({ slug }) => {
                 </div>
               ))}
             </div>
-          )}
-          {Boolean(waysToHelp.orgs.length) && (
-            <a
-              className={style['update-data']}
-              target="_blank"
-              rel="noopener noreferrer"
-              href={`https://github.com/jabranr/covidonation/blob/master/src/assets/data/countries/${waysToHelp.slug}.json`}
-            >
-              Update data for {waysToHelp.country} &raquo;
-            </a>
           )}
         </div>
       </div>
