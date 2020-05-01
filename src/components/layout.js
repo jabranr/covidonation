@@ -5,6 +5,12 @@ import cookie from 'js-cookie';
 
 import style from './style.module.scss';
 
+const PlusIcon = ({ width = 16, height = 16, ...attrs }) => (
+  <svg width={width} height={height} viewBox={`0 0 ${width * 2} ${height * 2}`} fill="currentColor" {...attrs}>
+    <path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z" />
+  </svg>
+);
+
 const Layout = ({ title, description, canonical, children }) => {
   const location = useLocation();
   const [hasCookiesConsent, setCookieConsent] = useState(cookie.get('cookie-consent'));
@@ -54,11 +60,14 @@ const Layout = ({ title, description, canonical, children }) => {
             <div className={style.tagline}>Ways to help</div>
           </div>
         )}
-        <nav className={style.nav}>
-          <Link to="/add-data" className={style['nav-btn']}>
-            Add data
-          </Link>
-        </nav>
+        {location.pathname !== '/add-data' && (
+          <nav className={style.nav}>
+            <Link to="/add-data" className={style['nav-item']}>
+              <PlusIcon className={style['plus-icon']} />
+              Add
+            </Link>
+          </nav>
+        )}
       </header>
       <main className={style.main}>{children}</main>
       <footer className={style.footer}>
