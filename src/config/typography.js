@@ -45,6 +45,12 @@ const typography = new Typography({
       color: '#666',
       textTransform: 'uppercase',
       letterSpacing: '1px'
+    },
+    '.lead': {
+      fontSize: '1.5rem'
+    },
+    'a:hover': {
+      color: '#f55555'
     }
   })
 });
