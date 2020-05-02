@@ -16,8 +16,7 @@
     "test:watch": "npm test -- -u --watch",
     "test:coverage": "npm test -- --coverage --watchAll=false --reporters=default --reporters=jest-junit",
     "format": "prettier --write \"src/**/*.{js,html,css,scss,json,svg}\"",
-    "preview": "npm run build && serve -s build",
-    "rebase:ci": "sh ./rebase-ci.sh"
+    "preview": "npm run build && serve -s build"
   },
   "keywords": [
     "coronavirus",
