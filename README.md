@@ -16,7 +16,7 @@ List of resources, donations, charities and information on ways to help in Coron
 - Build project for production
   - `npm run build`
 
-> Always branch out from `master` for your work unless working on a milestone then branch out from `develop` or see milestone details.
+> Always branch out from `develop` or see milestone details.
 
 ## Staging
 
@@ -38,13 +38,17 @@ See details of our [next milestone](https://github.com/jabranr/covidonation/mile
 
 ## How to contribute
 
-We would love you to contribute! See our [latest development](https://github.com/jabranr/covidonation/milestones) and already [reported issues](https://github.com/jabranr/covidonation/issues) to find out if there is something you can help us with. If not then create a new issue and send a pull request with your update.
+We would love you to contribute to improve the platform!
+
+See our [latest development](https://github.com/jabranr/covidonation/milestones) and already [reported issues](https://github.com/jabranr/covidonation/issues) to find out if there is something you can help us with. If not then create a new issue and send a pull request with your update.
 
 > Beware it is best to discuss before you start to work on a major change or new big feature.
 
 If you would like to report an issue or request a new feature then you can [create an issue](https://github.com/jabranr/covidonation/issues).
 
 ### Country data contribution
+
+> Alternatively you can also [use this form](https://covidonation.com/add-data) to add data for a country
 
 (R) Required fields
 (O) Optional fields
