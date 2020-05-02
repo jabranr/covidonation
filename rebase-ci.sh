@@ -2,6 +2,8 @@
 
 git config --global push.default simple
 git fetch --all
+git pull
+git branch -a
 
 echo 'Rebase CI branch from master'
 
