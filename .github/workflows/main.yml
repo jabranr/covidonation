@@ -1,0 +1,15 @@
+name: CI - Merge master into develop
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Merge to develop branch
+        uses: devmasx/merge-branch@v1.1.0
+        with:
+          type: now
+          target_branch: 'develop'
