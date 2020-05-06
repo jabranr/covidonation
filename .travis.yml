@@ -32,4 +32,4 @@ deploy:
 after_deploy:
   - git branch -a
   - git fetch --all
-  - git branch -a
+  - git remote -v
