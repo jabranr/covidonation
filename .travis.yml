@@ -16,6 +16,8 @@ notifications:
 
 before_deploy:
   - npm run build
+  - npm version patch -f -m 'Release v%s'
+  - git push && git push --tags
 
 deploy:
   provider: pages
@@ -30,6 +32,6 @@ deploy:
     branch: master
 
 after_deploy:
-  - git branch -a
-  - git fetch --all
-  - git remote -v
+  - git checkout origin/develop -B develop || exit
+  - git rebase origin/master
+  - git push origin develop
