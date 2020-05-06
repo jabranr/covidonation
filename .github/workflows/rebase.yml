@@ -7,7 +7,10 @@ jobs:
   rebase-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@develop
+      - uses: actions/checkout@master
       - uses: ljharb/rebase@master
+        with:
+          type: now
+          target_branch: 'develop'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
