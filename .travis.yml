@@ -33,5 +33,5 @@ after_deploy:
   - git fetch origin refs/heads/master:refs/remotes/origin/master
   - git fetch origin refs/heads/develop:refs/remotes/origin/develop
   - git checkout origin/develop -B develop
-  - git rebase origin/master
+  - git merge master --no-ff --no-edit
   - git push origin develop
