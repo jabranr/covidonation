@@ -17,7 +17,7 @@ notifications:
 before_deploy:
   - npm run build
   - npm version patch -f -m 'Release v%s'
-  - git push && git push --tags
+  - git push origin HEAD:master && git push origin HEAD:master --tags
 
 deploy:
   provider: pages
