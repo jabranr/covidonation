@@ -1,0 +1,13 @@
+name: Automatic rebase
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+  rebase-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@develop
+      - uses: ljharb/rebase@master
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
