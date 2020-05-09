@@ -1,41 +1,16 @@
 import React, { memo, useState, useRef } from 'react';
 
 import FormattedString from '../formatted-string';
-import { pushDataLayer } from '../../util';
+import { pushDataLayer, isInViewport, scrollToPoint } from '../../util';
 import SvgIcons from '../svg-icons';
 
 import style from './style.module.scss';
-
-const isInViewport = function (elem, stickyHeaderOffset = 100) {
-  const bounding = elem.getBoundingClientRect();
-  return (
-    bounding.top >= 0 + stickyHeaderOffset &&
-    bounding.left >= 0 &&
-    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
 
 const Organisation = ({ org }) => {
   const cardRef = useRef();
   const contactRef = useRef();
 
   const [isDetailedView, setDetailedView] = useState(false);
-
-  const scrollToTopOfCard = () => {
-    if (isInViewport(cardRef.current)) {
-      return;
-    }
-
-    if ('scrollBehavior' in document.documentElement.style) {
-      window.scrollTo({
-        top: cardRef.current.offsetTop - 100,
-        behavior: 'smooth'
-      });
-    } else {
-      window.scrollTo(0, cardRef.current.offsetTop - 100);
-    }
-  };
 
   return (
     <div ref={cardRef} className={style.org}>
@@ -193,7 +168,11 @@ const Organisation = ({ org }) => {
 
                       // wait for animation to finish before scrolling
                       setTimeout(() => {
-                        scrollToTopOfCard();
+                        if (isInViewport(cardRef.current)) {
+                          return;
+                        }
+
+                        scrollToPoint(cardRef.current.offsetTop);
                       }, 500);
                     }
 
