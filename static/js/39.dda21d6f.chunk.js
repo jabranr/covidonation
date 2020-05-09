@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[39],{137:function(o){o.exports=JSON.parse('{"country":"Burkina Faso","slug":"burkina-faso","orgs":[],"iso2Code":"BF","iso3Code":"BFA"}')}}]);
-//# sourceMappingURL=39.dda21d6f.chunk.js.map

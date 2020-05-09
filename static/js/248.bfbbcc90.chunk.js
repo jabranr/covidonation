@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[248],{346:function(o){o.exports=JSON.parse('{"country":"Western Sahara","slug":"western-sahara","orgs":[],"iso2Code":"EH","iso3Code":"ESH"}')}}]);
-//# sourceMappingURL=248.bfbbcc90.chunk.js.map

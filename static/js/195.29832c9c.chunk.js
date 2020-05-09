@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[195],{293:function(n){n.exports=JSON.parse('{"country":"Saint Vincent and Grenadines","slug":"saint-vincent-and-the-grenadines","orgs":[],"iso2Code":"VC","iso3Code":"VCT"}')}}]);
-//# sourceMappingURL=195.29832c9c.chunk.js.map

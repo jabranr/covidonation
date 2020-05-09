@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[215],{313:function(o){o.exports=JSON.parse('{"country":"Suriname","slug":"suriname","orgs":[],"iso2Code":"SR","iso3Code":"SUR"}')}}]);
-//# sourceMappingURL=215.f33dfd3d.chunk.js.map

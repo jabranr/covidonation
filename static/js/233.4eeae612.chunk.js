@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[233],{331:function(s){s.exports=JSON.parse('{"country":"Turks and Caicos Islands","slug":"turks-and-caicos-islands","orgs":[],"iso2Code":"TC","iso3Code":"TCA"}')}}]);
-//# sourceMappingURL=233.4eeae612.chunk.js.map
