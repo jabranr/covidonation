@@ -34,31 +34,34 @@ const HomePage = () => {
         </p>
 
         <h2 className="heading">Countries</h2>
-        <p className={style['lead-text']}>
-          Select a country to see details about{' '}
-          <i>
-            <strong>ways to help</strong>
-          </i>
-          .
-        </p>
-        <div className={style['country-search']}>
-          <div className={style.search}>
-            <input
-              ref={searchRef}
-              type="text"
-              placeholder="Type a country name"
-              className={style['search-input']}
-              onChange={(ev) => {
-                if (ev.target.value.length < 3) {
-                  return;
-                }
 
-                const newList = countries.filter((c) => new RegExp(ev.target.value, 'gi').test(c.name));
-                setFilteredCountries(newList);
-              }}
-            />
-            <SvgIcons name="search" width={18} height={18} viewBox="0 0 36 36" className={style['search-icon']} />
-          </div>
+        <div className={style['country-search']}>
+          <label>
+            <p className={style['lead-text']}>
+              Select a country to see details about{' '}
+              <i>
+                <strong>ways to help</strong>
+              </i>
+              .
+            </p>
+            <div className={style.search}>
+              <input
+                ref={searchRef}
+                type="text"
+                placeholder="Type a country name"
+                className={style['search-input']}
+                onChange={(ev) => {
+                  if (ev.target.value.length < 3) {
+                    return;
+                  }
+
+                  const newList = countries.filter((c) => new RegExp(ev.target.value, 'gi').test(c.name));
+                  setFilteredCountries(newList);
+                }}
+              />
+              <SvgIcons name="search" width={18} height={18} viewBox="0 0 36 36" className={style['search-icon']} />
+            </div>
+          </label>
           {Boolean(filteredCountries.length) && (
             <>
               <p className={style['result-indicator']}>Search result</p>
