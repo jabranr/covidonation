@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[144],{239:function(o){o.exports=JSON.parse('{"country":"Mauritania","slug":"mauritania","orgs":[],"iso2Code":"MR","iso3Code":"MRT"}')}}]);
-//# sourceMappingURL=144.ac635acb.chunk.js.map

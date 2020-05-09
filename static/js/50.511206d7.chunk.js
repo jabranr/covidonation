@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[50],{145:function(s){s.exports=JSON.parse('{"country":"Christmas Island","slug":"christmas-island","orgs":[],"iso2Code":"CX","iso3Code":"CXR"}')}}]);
-//# sourceMappingURL=50.511206d7.chunk.js.map

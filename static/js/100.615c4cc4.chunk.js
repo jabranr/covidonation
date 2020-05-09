@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[100],{195:function(o){o.exports=JSON.parse('{"country":"Holy See (Vatican City State)","slug":"holy-see-vatican-city-state","orgs":[],"iso2Code":"VA","iso3Code":"VAT"}')}}]);
-//# sourceMappingURL=100.615c4cc4.chunk.js.map

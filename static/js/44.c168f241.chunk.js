@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[44],{139:function(o){o.exports=JSON.parse('{"country":"Cape Verde","slug":"cape-verde","orgs":[],"iso2Code":"CV","iso3Code":"CPV"}')}}]);
-//# sourceMappingURL=44.c168f241.chunk.js.map

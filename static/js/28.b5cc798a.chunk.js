@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[28],{123:function(o){o.exports=JSON.parse('{"country":"Bermuda","slug":"bermuda","orgs":[],"iso2Code":"BM","iso3Code":"BMU"}')}}]);
-//# sourceMappingURL=28.b5cc798a.chunk.js.map
