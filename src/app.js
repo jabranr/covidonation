@@ -6,7 +6,7 @@ import './config/typography';
 import config from './config';
 import SummaryProvider from './store/summary-provider';
 import Routing from './routing';
-import { pushDataLayer } from './util';
+import { pushDataLayer, scrollToPoint } from './util';
 
 const { APP_BASEPATH } = config();
 
@@ -17,7 +17,7 @@ const history = createBrowserHistory({
 // Register page view on app navigation
 history.listen((location, action) => {
   if (location.pathname !== '/' && action === 'PUSH') {
-    window.scrollTo(0, 0);
+    scrollToPoint(0);
   }
 
   pushDataLayer({
