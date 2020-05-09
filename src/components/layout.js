@@ -3,13 +3,9 @@ import { useLocation, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import cookie from 'js-cookie';
 
-import style from './style.module.scss';
+import SvgIcons from './svg-icons';
 
-const PlusIcon = ({ width = 16, height = 16, ...attrs }) => (
-  <svg width={width} height={height} viewBox={`0 0 ${width * 2} ${height * 2}`} fill="currentColor" {...attrs}>
-    <path d="M21 8l-5 5-5-5-3 3 5 5-5 5 3 3 5-5 5 5 3-3-5-5 5-5z" />
-  </svg>
-);
+import style from './style.module.scss';
 
 const Layout = ({ title, description, canonical, children }) => {
   const location = useLocation();
@@ -63,7 +59,7 @@ const Layout = ({ title, description, canonical, children }) => {
         {location.pathname !== '/add-data' && (
           <nav className={style.nav}>
             <Link to="/add-data" className={style['nav-item']}>
-              <PlusIcon className={style['plus-icon']} />
+              <SvgIcons name="plus" width={16} height={16} viewBox="0 0 32 32" className={style['plus-icon']} />
               Add
             </Link>
           </nav>

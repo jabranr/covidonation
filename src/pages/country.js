@@ -9,16 +9,11 @@ import FormattedString from '../components/formatted-string';
 import useSummary from '../store/summary-hook';
 import config from '../config';
 import { pushDataLayer } from '../util';
+import SvgIcons from '../components/svg-icons';
 
 import style from './country.module.scss';
 
 const { APP_HOSTNAME, APP_BASEPATH } = config();
-
-export const TickIcon = ({ width = 16, height = 14, ...attrs }) => (
-  <svg width={width} height={height} viewBox={`0 0 ${width * 2} ${height * 2}`} fill="currentColor" {...attrs}>
-    <path d="M19.414 27.414l10-10a2 2 0 000-2.828l-10-10a2 2 0 00-2.828 2.828L23.172 14H4a2 2 0 000 4h19.172l-6.586 6.586c-.39.39-.586.902-.586 1.414s.195 1.024.586 1.414a2 2 0 002.828 0z" />
-  </svg>
-);
 
 const CountryPage = ({ slug }) => {
   const location = useLocation();
@@ -107,7 +102,7 @@ const CountryPage = ({ slug }) => {
               <h2 className="heading">Other resources</h2>
               {waysToHelp.links.map((link) => (
                 <div key={link} className={style.link}>
-                  <TickIcon className={style['tick-icon']} />
+                  <SvgIcons name="tick" width={16} height={14} viewBox="0 0 32 28" className={style['tick-icon']} />
                   <FormattedString key={link} href={link}>
                     {link}
                   </FormattedString>
