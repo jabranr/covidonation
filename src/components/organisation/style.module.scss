@@ -77,8 +77,8 @@
 
 .donation-cta {
   display: block;
-  background-color: #f5555530;
-  color: #f55555;
+  background-color: #cd454530;
+  color: #cd4545;
   border-radius: 4px;
   min-width: 100px;
   text-align: center;
@@ -89,7 +89,7 @@
   &:hover,
   &:active {
     color: white;
-    background: #f55555;
+    background: #cd4545;
   }
 
   @media (min-width: 600px) {
@@ -163,7 +163,7 @@
 
   &:hover,
   &:active {
-    color: #f55555;
+    color: #cd4545;
   }
 }
 

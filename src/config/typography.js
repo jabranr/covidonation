@@ -50,7 +50,7 @@ const typography = new Typography({
       fontSize: '1.5rem'
     },
     'a:hover': {
-      color: '#f55555'
+      color: '#cd4545'
     }
   })
 });
