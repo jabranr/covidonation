@@ -73,8 +73,15 @@ const Layout = ({ title, description, canonical, children }) => {
           <a target="_blank" rel="noopener noreferrer" href="https://www.covid19api.com?utm_source=covidonation">
             www.covid19api.com
           </a>
+          <br />
+          Country flags from{' '}
+          <a target="_blank" rel="noopener noreferrer" href="https://restcountries.eu?utm_source=covidonation">
+            www.restcountries.eu
+          </a>
         </div>
         <div className={style['colophone']}>
+          <Link to="/terms">Terms of service</Link>&nbsp;&bull;&nbsp;<Link to="/privacy-policy">Privacy policy</Link>
+          <br />
           Get in touch at{' '}
           <a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/jabranr?utm_source=covidonation">
             Twitter
