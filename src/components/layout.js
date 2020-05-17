@@ -14,7 +14,7 @@ const Layout = ({ title, description, canonical, children }) => {
   return (
     <div className={style.layout}>
       <Helmet>
-        <title>{title || `COVIDonation - Ways to help in Coronavirus (COVID-19) panedmic`}</title>
+        <title>{title || `Covidonation - Ways to help in Coronavirus (COVID-19) panedmic`}</title>
         <meta
           name="description"
           content={
