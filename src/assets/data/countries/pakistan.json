@@ -183,6 +183,22 @@
       "needHelpWith": ["money", "volunteers", "food", "ration"],
       "helpingWith": ["rations", "PPE"],
       "areasCovered": ["Karachi", "Islamabad", "Lahore", "Sukkur"]
+    },
+    {
+      "name": "zakatlists.com",
+      "description": "We are distributing ration bags, eid packets of Rs 5000 and funding welfare projects in Pakistan. You can join us by sending us your valuable donations. We regularly give feedback to the donators.",
+      "contacts": ["+92 323 5168638"],
+      "donation": "+923235168638",
+      "social": [
+        {
+          "website": "https://www.zakatlists.com",
+          "facebook": "https://facebook.com/zakatlists",
+          "twitter": "https://twitter.com/zakatlists"
+        }
+      ],
+      "needHelpWith": ["money"],
+      "helpingWith": ["Rations", "Eidi Envelopes", "Funding Volunteer Works"],
+      "areasCovered": ["Pakistan"]
     }
   ],
   "iso2Code": "PK",
