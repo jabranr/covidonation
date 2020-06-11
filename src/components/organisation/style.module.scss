@@ -49,13 +49,20 @@
 }
 
 .helping-with {
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 
 .hw-title {
   font-size: 0.875rem;
   color: #888;
-  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.hw-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .hw-items {
@@ -64,15 +71,16 @@
   font-size: 0.875rem;
   padding: 2px 6px;
   border-radius: 4px;
+  float: left;
+  margin-bottom: 0.5rem;
 
-  & + & {
-    margin-left: 5px;
+  &:not(:last-child) {
+    margin-right: 0.5rem;
   }
 }
 
 .description {
   color: #888;
-  margin-top: 1rem;
 }
 
 .donation-cta {
@@ -90,12 +98,6 @@
   &:active {
     color: white;
     background: #cd4545;
-  }
-
-  @media (min-width: 600px) {
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 }
 
@@ -171,4 +173,38 @@
   vertical-align: middle;
   margin-right: 3px;
   margin-top: -2px;
+}
+
+// Organization Card Layout
+.flex {
+  @media (min-width: 600px) {
+    display: flex;
+  }
+}
+
+.flex-child {
+  &:nth-child(1) {
+    width: 100%;
+    @media (min-width: 600px) {
+      width: 70%;
+    }
+  }
+
+  &:nth-child(2) {
+    width: 100%;
+    @media (min-width: 600px) {
+      width: 30%;
+    }
+  }
+}
+
+// Need Help With
+.need-help-with {
+  border-left: 1px solid #ddd;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.nhw-title {
+  @extend .hw-title;
 }
