@@ -81,6 +81,9 @@
 
 .description {
   color: #888;
+  @media (min-width: 600px) {
+    padding-right: 1rem;
+  }
 }
 
 .donation-cta {
@@ -200,9 +203,15 @@
 
 // Need Help With
 .need-help-with {
-  border-left: 1px solid #ddd;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding: 0.5rem;
+}
+.nhw-container {
+  @extend .hw-container;
+}
+
+.nhw-items {
+  @extend .hw-items;
 }
 
 .nhw-title {

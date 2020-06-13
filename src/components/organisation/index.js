@@ -87,11 +87,13 @@ const Organisation = ({ org }) => {
           {Boolean(org.needHelpWith) && (
             <div className={style['need-help-with']}>
               <div className={style['nhw-title']}>Need help with:</div>
-              <ul>
-                {org.needHelpWith.map((nhw) => (
-                  <li key={nhw}>{nhw}</li>
+              <div className={style['nhw-container']}>
+                {org.needHelpWith.map((hw) => (
+                  <span key={hw} className={style['nhw-items']}>
+                    {hw}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           )}
         </div>
