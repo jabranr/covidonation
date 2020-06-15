@@ -14,73 +14,90 @@ const Organisation = ({ org }) => {
 
   return (
     <div ref={cardRef} className={style.org}>
-      <div className={style.header}>
-        <h3 className={style.name}>{org.name}</h3>
-        {Boolean(org.areasCovered.length) && (
-          <div className={style['areas-covered']}>
-            <SvgIcons name="location" width={14} height={14} viewBox="0 0 1024 1024" />
-            <div>
-              {org.areasCovered.map((areaCovered) => (
-                <a
-                  key={areaCovered}
-                  className={style['ac-link']}
-                  onClick={() => {
-                    pushDataLayer({
-                      event: 'gaEvent',
-                      gaCategory: 'Areas covered CTA',
-                      gaAction: areaCovered,
-                      gaLabel: org.name
-                    });
-                  }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={`//maps.google.com?q=${areaCovered}`}
-                >
-                  {areaCovered}
-                </a>
-              ))}
+      <div className={style.flex}>
+        <div className={style['flex-child']}>
+          <h3 className={style.name}>{org.name}</h3>
+          {Boolean(org.helpingWith) && (
+            <div className={style['helping-with']}>
+              <div className={style['hw-title']}>Helping with:</div>
+              <div className={style['hw-container']}>
+                {org.helpingWith.map((hw) => (
+                  <span key={hw} className={style['hw-items']}>
+                    {hw}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
-        {Boolean(org.helpingWith) && (
-          <div className={style['helping-with']}>
-            <span className={style['hw-title']}>Helping with</span>
-            {org.helpingWith.map((hw) => (
-              <span key={hw} className={style['hw-items']}>
-                {hw}
-              </span>
-            ))}
-          </div>
-        )}
-        <FormattedString
-          href={org.donation}
-          className={style['donation-cta']}
-          onClick={() => {
-            pushDataLayer({
-              event: 'gaEvent',
-              gaCategory: 'Make a donation CTA',
-              gaAction: org.name
-            });
-          }}
-        >
-          {/[0-9-+ ]/.test(org.donation) ? (
-            <SvgIcons name="phone" width={16} height={16} viewBox="0 0 32 32" className={style['cta-icon']} />
-          ) : (
-            <SvgIcons name="web" width={16} height={18} viewBox="0 0 32 36" className={style['cta-icon']} />
-          )}{' '}
-          Make a donation
-        </FormattedString>
+          )}
+          {Boolean(org.areasCovered.length) && (
+            <div className={style['areas-covered']}>
+              <SvgIcons name="location" width={14} height={14} viewBox="0 0 1024 1024" />
+              <div>
+                {org.areasCovered.map((areaCovered) => (
+                  <a
+                    key={areaCovered}
+                    className={style['ac-link']}
+                    onClick={() => {
+                      pushDataLayer({
+                        event: 'gaEvent',
+                        gaCategory: 'Areas covered CTA',
+                        gaAction: areaCovered,
+                        gaLabel: org.name
+                      });
+                    }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`//maps.google.com?q=${areaCovered}`}
+                  >
+                    {areaCovered}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+          <p
+            className={style.description}
+            dangerouslySetInnerHTML={{
+              __html:
+                isDetailedView || org.description.length <= 150
+                  ? org.description
+                  : `${org.description.substring(0, 150)}...`
+            }}
+          />
+        </div>
+        <div className={style['flex-child']}>
+          <FormattedString
+            href={org.donation}
+            className={style['donation-cta']}
+            onClick={() => {
+              pushDataLayer({
+                event: 'gaEvent',
+                gaCategory: 'Make a donation CTA',
+                gaAction: org.name
+              });
+            }}
+          >
+            {/[0-9-+ ]/.test(org.donation) ? (
+              <SvgIcons name="phone" width={16} height={16} viewBox="0 0 32 32" className={style['cta-icon']} />
+            ) : (
+              <SvgIcons name="web" width={16} height={18} viewBox="0 0 32 36" className={style['cta-icon']} />
+            )}{' '}
+            Make a donation
+          </FormattedString>
+          {Boolean(org.needHelpWith) && (
+            <div className={style['need-help-with']}>
+              <div className={style['nhw-title']}>Need help with:</div>
+              <div className={style['nhw-container']}>
+                {org.needHelpWith.map((hw) => (
+                  <span key={hw} className={style['nhw-items']}>
+                    {hw}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
-
-      <p
-        className={style.description}
-        dangerouslySetInnerHTML={{
-          __html:
-            isDetailedView || org.description.length <= 150
-              ? org.description
-              : `${org.description.substring(0, 150)}...`
-        }}
-      />
 
       {Boolean(org.contacts && org.contacts.length) && (
         <div ref={contactRef} className={style.contacts} style={{ '--height': `0px` }}>
