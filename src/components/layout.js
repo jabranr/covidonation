@@ -34,7 +34,7 @@ const Layout = ({ title, description, canonical, children }) => {
             type="button"
             className={style['cookie-cta']}
             onClick={(ev) => {
-              cookie.set('cookie-consent', 'accepted');
+              cookie.set('cookie-consent', 'accepted', { expires: 365 });
               setCookieConsent(true);
             }}
           >
