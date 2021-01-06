@@ -42,7 +42,7 @@
   "devDependencies": {
     "@jabranr-lab/prettier": "^1.1.0",
     "@prettier/plugin-xml": "^0.7.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "cloudflare": "^2.7.0",
     "dayjs": "^1.8.26",
