@@ -17,7 +17,8 @@
     "test:coverage": "npm test -- --coverage --watchAll=false --reporters=default --reporters=jest-junit",
     "format": "prettier --write \"src/**/*.{js,html,css,scss,json,svg}\"",
     "preview": "npm run build && serve -s build",
-    "cf:cache:purge": "node ./purge-cf-cache.js"
+    "cf:cache:purge": "node ./purge-cf-cache.js",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "coronavirus",
