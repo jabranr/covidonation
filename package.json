@@ -16,7 +16,7 @@
     "test:watch": "npm test -- -u --watch",
     "test:coverage": "npm test -- --coverage --watchAll=false --reporters=default --reporters=jest-junit",
     "format": "prettier --write \"src/**/*.{js,html,css,scss,json,svg}\"",
-    "preview": "npm run build && serve -s build",
+    "preview": "npm run build && npx serve -s build",
     "cf:cache:purge": "node ./purge-cf-cache.js",
     "deploy": "gh-pages -d build"
   },
@@ -61,7 +61,6 @@
     "react-router-dom": "^5.3.3",
     "react-scripts": "^3.4.4",
     "sass": "^1.52.2",
-    "serve": "^11.3.2",
     "typography": "^0.16.21"
   },
   "eslintConfig": {
