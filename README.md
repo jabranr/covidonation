@@ -2,7 +2,7 @@
 
 List of resources, donations, charities and information on ways to help in Coronavirus (COVID-19) pandemic.
 
-> This is the uncompiled source code for covidonation.com website.
+> This is the uncompiled source code for https://jabran.me/covidonation website.
 
 ## Development
 
@@ -48,7 +48,7 @@ If you would like to report an issue or request a new feature then you can [crea
 
 ### Country data contribution
 
-[Use this form](https://covidonation.com/add-data) to add data for a country. The provided data is then reviewed and processed into the website in next 24-48 hours.
+[Use this form](https://jabran.me/covidonation/add-data) to add data for a country. The provided data is then reviewed and processed into the website in next 24-48 hours.
 
 Here is the breakdown of fields structure in the country data files.
 
