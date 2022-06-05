@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[81],{344:function(o){o.exports=JSON.parse('{"country":"French Southern Territories","slug":"french-southern-territories","orgs":[],"iso2Code":"TF","iso3Code":"ATF"}')}}]);
+//# sourceMappingURL=81.6f9a19b2.chunk.js.map

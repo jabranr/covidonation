@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[221],{484:function(o){o.exports=JSON.parse('{"country":"Taiwan, Republic of China","slug":"taiwan","orgs":[],"iso2Code":"TW","iso3Code":"TWN"}')}}]);
+//# sourceMappingURL=221.08fa05e1.chunk.js.map

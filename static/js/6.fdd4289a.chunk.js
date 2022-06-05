@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[6],{269:function(o){o.exports=JSON.parse('{"country":"Albania","slug":"albania","helplines":["https://shendetesia.gov.al"],"orgs":[],"iso2Code":"AL","iso3Code":"ALB"}')}}]);
+//# sourceMappingURL=6.fdd4289a.chunk.js.map

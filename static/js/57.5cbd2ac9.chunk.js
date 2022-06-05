@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[57],{320:function(o){o.exports=JSON.parse('{"country":"Costa Rica","slug":"costa-rica","orgs":[],"iso2Code":"CR","iso3Code":"CRI"}')}}]);
+//# sourceMappingURL=57.5cbd2ac9.chunk.js.map

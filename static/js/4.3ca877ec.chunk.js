@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[4],{267:function(o){o.exports=JSON.parse('{"country":"Afghanistan","slug":"afghanistan","helplines":["https://moph.gov.af/en","+93202301374"],"orgs":[],"iso2Code":"AF","iso3Code":"AFG"}')}}]);
+//# sourceMappingURL=4.3ca877ec.chunk.js.map

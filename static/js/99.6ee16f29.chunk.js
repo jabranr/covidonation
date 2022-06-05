@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[99],{362:function(o){o.exports=JSON.parse('{"country":"Heard and Mcdonald Islands","slug":"heard-and-mcdonald-islands","orgs":[],"iso2Code":"HM","iso3Code":"HMD"}')}}]);
+//# sourceMappingURL=99.6ee16f29.chunk.js.map

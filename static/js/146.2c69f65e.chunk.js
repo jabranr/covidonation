@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[146],{409:function(o){o.exports=JSON.parse('{"country":"Mayotte","slug":"mayotte","orgs":[],"iso2Code":"YT","iso3Code":"MYT"}')}}]);
+//# sourceMappingURL=146.2c69f65e.chunk.js.map

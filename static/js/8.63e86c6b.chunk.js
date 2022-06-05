@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[8],{271:function(o){o.exports=JSON.parse('{"country":"American Samoa","slug":"american-samoa","orgs":[],"iso2Code":"AS","iso3Code":"ASM"}')}}]);
+//# sourceMappingURL=8.63e86c6b.chunk.js.map

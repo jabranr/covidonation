@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[192],{288:function(o){o.exports=JSON.parse('{"country":"Saint Lucia","slug":"saint-lucia","orgs":[],"iso2Code":"LC","iso3Code":"LCA"}')}}]);
-//# sourceMappingURL=192.ed919d59.chunk.js.map

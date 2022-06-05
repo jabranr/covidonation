@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[110],{373:function(o){o.exports=JSON.parse('{"country":"Isle of Man","slug":"isle-of-man","orgs":[],"iso2Code":"IM","iso3Code":"IMN"}')}}]);
+//# sourceMappingURL=110.6214f418.chunk.js.map

@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[91],{187:function(o){o.exports=JSON.parse('{"country":"Guadeloupe","slug":"guadeloupe","orgs":[],"iso2Code":"GP","iso3Code":"GLP"}')}}]);
-//# sourceMappingURL=91.2482722e.chunk.js.map

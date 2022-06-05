@@ -1,2 +1,0 @@
-(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[210],{306:function(o){o.exports=JSON.parse('{"country":"South Georgia and the South Sandwich Islands","slug":"south-georgia-and-the-south-sandwich-islands","orgs":[],"iso2Code":"GS","iso3Code":"SGS"}')}}]);
-//# sourceMappingURL=210.3599e9f5.chunk.js.map

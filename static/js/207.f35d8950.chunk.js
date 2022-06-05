@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[207],{470:function(o){o.exports=JSON.parse('{"country":"Solomon Islands","slug":"solomon-islands","orgs":[],"iso2Code":"SB","iso3Code":"SLB"}')}}]);
+//# sourceMappingURL=207.f35d8950.chunk.js.map

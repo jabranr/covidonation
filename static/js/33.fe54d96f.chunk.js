@@ -1,0 +1,2 @@
+(this.webpackJsonpcovidonation=this.webpackJsonpcovidonation||[]).push([[33],{296:function(o){o.exports=JSON.parse('{"country":"Bouvet Island","slug":"bouvet-island","orgs":[],"iso2Code":"BV","iso3Code":"BVT"}')}}]);
+//# sourceMappingURL=33.fe54d96f.chunk.js.map
