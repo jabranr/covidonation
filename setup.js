@@ -14,11 +14,13 @@ const flags = path.resolve(__dirname, './public/assets/flags');
 const countryList = fs.readdirSync(countries);
 const countryData = [];
 const countryRoutes = [];
-const sitemap = ['https://covidonation.com'];
+const sitemap = ['https://jabran.me/covidonation'];
 
 countryList.forEach((c) => {
   const content = JSON.parse(fs.readFileSync(`${countries}/${c}`));
-  const hasFlag = fs.existsSync(`${flags}/${content.iso2Code.toLowerCase()}.svg`);
+  const hasFlag = fs.existsSync(
+    `${flags}/${content.iso2Code.toLowerCase()}.svg`
+  );
 
   countryData.push({
     name: content.country,
@@ -31,7 +33,7 @@ countryList.forEach((c) => {
     `<RouteWithSummary exact path="/${content.slug}" slug="${content.slug}" render={(props) => <CountryPage slug="${content.slug}" {...props} />} />`
   );
 
-  sitemap.push(`https://covidonation.com/${content.slug}`);
+  sitemap.push(`https://jabran.me/covidonation/${content.slug}`);
 });
 
 // write file with slugs for all countries
@@ -61,4 +63,7 @@ export default CountryRoutes;`
 );
 
 // generate sitemap
-fs.writeFileSync(path.resolve(__dirname, './public/sitemap.txt'), sitemap.join('\n'));
+fs.writeFileSync(
+  path.resolve(__dirname, './public/sitemap.txt'),
+  sitemap.join('\n')
+);
